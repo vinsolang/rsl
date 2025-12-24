@@ -14,9 +14,14 @@
 
 <section>
 <div class="main-banner">
-            <div class="home-banner-logo">
+ <video autoplay muted class="home-banner-logo">
+  <source src="{{ asset('assets/videos/LOGO.mp4') }}">
+  </source>
+ </video>
+
+            {{-- <div class="home-banner-logo">
               <img src="{{ asset('assets/images/logo.png') }}">
-            </div>
+            </div> --}}
           <div class="home-banner-context">
         <h5>Welcome to</h5>
            <h1>RSL TRADING</h1>

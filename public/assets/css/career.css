@@ -308,9 +308,10 @@ display: none;
 .career-file-form label{
   position: absolute;
   z-index: 0;
-  left: 5%;
+  left: 0%;
   top: 50%;
-  transform: translate(5%, -50%);
+  transform: translate(0%, -50%);
+  margin-left: 2rem;
 }
 
 .btn-career-submit {
@@ -366,3 +367,4 @@ display: none;
   margin-top: 0.7rem;
 }
 }
+

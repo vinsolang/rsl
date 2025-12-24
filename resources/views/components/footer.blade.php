@@ -28,10 +28,10 @@
    footer .footer-content{
       width: 100%;
       display: grid;
-      grid-template-columns: 1fr 3fr 4fr 5fr;
+      grid-template-columns: 2fr 2.5fr 4fr 5fr;
       gap: 1.5rem;
-      padding-left: 2.5rem;
-      padding-right: 2.5rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
       font-size: 16px;
       margin-top: 10rem;
    }
@@ -49,10 +49,18 @@
       list-style: none;
    }
 
+   
    footer .footer-content .footer-navigate li a{
       color: #FFFFFF;
       text-decoration: none;
+      transition: all 0.5s ease;
    }
+
+  footer .footer-content .footer-navigate li:hover a{
+    background-color: #0F963A;
+
+   }
+
 
    footer .footer-content .footer-address{ 
       text-align: end;
@@ -62,6 +70,7 @@
    footer .footer-content .footer-address li{
       list-style: none;
    }
+   
 
    footer .footer-content .footer-address ul li h5{
       margin-top: 1.5rem;
