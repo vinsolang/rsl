@@ -8,16 +8,16 @@
      <link rel="stylesheet" href="{{ asset('assets/css/career.css') }}">
 @endsection
 
-@section('content') 
+@section('content')
 
 <section>
-<div class="main-banner">
-    <img class="img-banner" src="{{ asset('assets/images/banner-img-1.png') }}">
+<div class="main-banner" style="background-image: url('{{ asset('assets/images/banner-img-1.png') }}')">
+    {{-- <img class="img-banner" src="{{ asset('assets/images/banner-img-1.png') }}"> --}}
      <div class="main-banner-h1-bg">
         <h1>Career</h1>
      </div>
      <div class="main-banner-p-bg">
-    <p class="sub-1">​Join Our Team and Grow with Cambodia’s 
+    <p class="sub-1">​Join Our Team and Grow with Cambodia’s
 Leading Agricultural Exporter”</p>
 <p class="sub-2">Be part of a company that connects local farmers to global markets, values integrity, and delivers quality products worldwide.”</p>
      </div>
@@ -83,7 +83,7 @@ Leading Agricultural Exporter”</p>
             <div class="col-12 d-flex justify-content-center">
                <button class="btn-career-submit"><img src="{{ asset('assets/images/btn-submit-bg.png') }}"><p>Submit</p></button>
             </div>
-            
+
           </div>
          </div>
     </div>

@@ -8,7 +8,7 @@
      <link rel="stylesheet" href="{{ asset('assets/css/contact.css') }}">
 @endsection
 
-@section('content') 
+@section('content')
 
 <section>
 
@@ -16,9 +16,9 @@
     <div class="contact-bg">
   <img src="{{ asset('assets/images/contact-bg.png') }}" >
     </div>
-    
+
     <div class="form-contact">
-  
+
 <section>
 <div class="wrapper-contact container">
 <h1>Contact Us</h1>
@@ -31,10 +31,10 @@
   <input class="col-12" placeholder="Mobile Phone ">
 </div>
 
-<div class="col-lg-6 col-md-6 input-field"> 
+<div class="col-lg-6 col-md-6 input-field">
   <input class="col-12" placeholder="Company Name">
 </div>
- 
+
 <div class="col-lg-6 col-md-6 input-field">
  <select class="form-select" aria-label="Default select example">
  <option selected>Import</option>

@@ -8,11 +8,11 @@
      <link rel="stylesheet" href="{{ asset('assets/css/import.css') }}">
 @endsection
 
-@section('content') 
+@section('content')
 
 <section>
-<div class="main-banner">
-  <img class="img-banner" src="{{ asset('assets/images/banner-img-1.png') }}">
+<div class="main-banner" style="background-image: url('{{ asset('assets/images/banner-img-1.png') }}')">
+  {{-- <img class="img-banner" src="{{ asset('assets/images/banner-img-1.png') }}"> --}}
      <div class="main-banner-h1-bg">
         <h1>Import</h1>
        <h1>Commodities</h1>
@@ -38,12 +38,12 @@
             <img class="card-product-bg" src="{{ asset('assets/images/export-card-product-1.png') }}">
              <div class="card-product-detail">
                  <h5> Premium Rice Varieties</h5>
-                 <p>High-quality imported aromatic and medium-grain rice varieties trusted by international buyers.</p>    
+                 <p>High-quality imported aromatic and medium-grain rice varieties trusted by international buyers.</p>
                 <div class="smaill-detail-card">
                 <button><a>Basmati Rice (India)</a></button>
                <button><a>Yellow Corn</a></button>
                 </div>
-                             
+
                   <div class="btn-card-interest-to-export">
                   <button >Interest to Export</button>
                 </div>
@@ -61,14 +61,14 @@
             <img class="card-product-bg" src="{{ asset('assets/images/export-card-product-1.png') }}">
              <div class="card-product-detail">
                  <h5> Whole Spices</h5>
-                 <p>Sourced from reputable growers to ensure purity, aroma, and strong market demand.</p>    
+                 <p>Sourced from reputable growers to ensure purity, aroma, and strong market demand.</p>
                 <div class="smaill-detail-card">
                 <button><a>Cumin Seeds</a></button>
                <button><a>Turmeric (Whole)</a></button>
                     <button><a>Red Peppers (Whole)</a></button>
                          <button><a>Cardamom (Green)</a></button>
                 </div>
-                             
+
                   <div class="btn-card-interest-to-export">
                   <button >Interest to Export</button>
                 </div>
@@ -87,12 +87,12 @@
             <img class="card-product-bg" src="{{ asset('assets/images/export-card-product-1.png') }}">
              <div class="card-product-detail">
                  <h5> Spice Powders</h5>
-                 <p>Finely milled premium spice powders ready for wholesale and reprocessing.</p>    
+                 <p>Finely milled premium spice powders ready for wholesale and reprocessing.</p>
                 <div class="smaill-detail-card">
                 <button><a>Turmeric Powder</a></button>
                <button><a>Red Pepper Powder</a></button>
                 </div>
-                             
+
                   <div class="btn-card-interest-to-export">
                   <button >Interest to Export</button>
                 </div>
@@ -111,12 +111,12 @@
             <img class="card-product-bg" src="{{ asset('assets/images/export-card-product-1.png') }}">
              <div class="card-product-detail">
                  <h5> Dehydrated Vegetables</h5>
-                 <p>Long-shelf-life dehydrated garlic and onion products ideal for food production and distribution.</p>    
+                 <p>Long-shelf-life dehydrated garlic and onion products ideal for food production and distribution.</p>
                 <div class="smaill-detail-card">
                 <button><a>Dried Garlic</a></button>
                <button><a>Yellow Corn</a></button>
                 </div>
-                             
+
                   <div class="btn-card-interest-to-export">
                   <button >Interest to Export</button>
                 </div>
@@ -139,7 +139,7 @@
   <div class="partner-main">
     <img class="partner-bg" src="{{ asset('assets/images/bg-3.png') }}">
     <h1>Why Partner with RSL Trading?</h1>
-    
+
       <div class="partner-card-wrapper">
       <div class="partner-card">
          <svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -235,10 +235,10 @@
   <input class="col-12" placeholder="Mobile Phone ">
 </div>
 
-<div class="col-lg-6 col-md-6 input-field"> 
+<div class="col-lg-6 col-md-6 input-field">
   <input class="col-12" placeholder="Company Name">
 </div>
- 
+
 <div class="col-lg-6 col-md-6 input-field">
   <input class="col-12" placeholder="Import
 ">

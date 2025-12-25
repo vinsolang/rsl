@@ -11,8 +11,8 @@
 @section('content')
 
 <section>
-<div class="main-banner">
-     <img class="img-banner" src="{{ asset('assets/images/banner-img-1.png') }}">
+<div class="main-banner" style="background-image: url('{{ asset('assets/images/banner-img-1.png') }}')">
+     {{-- <img class="img-banner" src="{{ asset('assets/images/banner-img-1.png') }}"> --}}
      <div class="main-banner-h1-bg">
         <h1>Events</h1>
      </div>

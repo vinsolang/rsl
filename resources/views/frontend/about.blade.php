@@ -8,11 +8,11 @@
      <link rel="stylesheet" href="{{ asset('assets/css/about.css') }}">
 @endsection
 
-@section('content') 
+@section('content')
 
 <section>
-<div class="main-banner">
-  <img class="img-banner"  src="{{ asset('assets/images/banner-img-1.png') }}">
+<div class="main-banner" style="background-image: url('{{ asset('assets/images/banner-img-1.png') }}')">
+  {{-- <img class="img-banner"  src="{{ asset('assets/images/banner-img-1.png') }}"> --}}
      <div class="main-banner-h1-bg">
         <h1>About Us</h1>
      </div>
@@ -33,13 +33,13 @@
         </div>
       <div class="main-card-product">
       <div class="container">
-        <div class="row">  
+        <div class="row">
 
 
                <div class="col-lg-4 col-md-6 col-12">
           <div class="card-product">
            <div class="first-sub-card">
-              <h5 style="color: #8DC640">Our Vision</h5> 
+              <h5 style="color: #8DC640">Our Vision</h5>
               <p>Everyone has Better Health, Longer Life & Greater Future.</p>
 
            </div>
@@ -65,7 +65,7 @@
           <div class="col-lg-4 col-md-6 col-12">
           <div class="card-product">
            <div class="first-sub-card">
-              <h5>Our Mission</h5> 
+              <h5>Our Mission</h5>
               <p>To Find the BEST Quality Products with Reasonable Price for Customer</p>
          <p>To Bring “Made in Cambodia” to THE WORLD.</p>
          <p>To Help Farmer to get more jobs and better incomes</p>
@@ -100,13 +100,13 @@
           </div>
 
 
-          
 
-          
+
+
           <div class="col-lg-4 col-md-6 col-12">
           <div class="card-product">
            <div class="first-sub-card">
-              <h5 style="color: #059848">Our Core Values</h5> 
+              <h5 style="color: #059848">Our Core Values</h5>
               <div class="first-sub-card-context">
    <h5 style="font-weight: bold; color: #000000">PEACE</h5>
               <h6 style="font-weight: bold;">P – Passion</h6>
@@ -143,11 +143,11 @@
           </div>
 
 
-          
-   
 
 
-   
+
+
+
 
         </div>
       </div>
@@ -193,7 +193,7 @@
       </div>
 
 
-      
+
     </div>
   </div>
   </div>
@@ -229,7 +229,7 @@
   <input class="col-12" placeholder="Mobile Phone ">
 </div>
 
-<div class="col-lg-6 col-md-6 input-field"> 
+<div class="col-lg-6 col-md-6 input-field">
   <input class="col-12" placeholder="Company Name">
 </div>
 
