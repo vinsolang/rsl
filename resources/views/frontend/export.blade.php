@@ -8,11 +8,11 @@
      <link rel="stylesheet" href="{{ asset('assets/css/export.css') }}">
 @endsection
 
-@section('content') 
+@section('content')
 
 <section>
-<div class="main-banner">
-   <img class="img-banner" src="{{ asset('assets/images/banner-img-1.png') }}">
+<div class="main-banner" style="background-image: url('{{ asset('assets/images/banner-img-1.png') }}')">
+   {{-- <img class="img-banner" src="{{ asset('assets/images/banner-img-1.png') }}"> --}}
 
      <div class="main-banner-h1-bg">
         <h1>Export</h1>
@@ -40,9 +40,9 @@
             <img class="card-product-bg" src="{{ asset('assets/images/export-card-product-1.png') }}">
              <div class="card-product-detail">
                  <h5>Grains & Cereals</h5>
-                 <p>High-quality, farm-sourced grains 
-trusted by local farmers and global 
-buyers.</p>    
+                 <p>High-quality, farm-sourced grains
+trusted by local farmers and global
+buyers.</p>
 
        <div class="smaill-detail-card">
                 <button><a href="{{ route('rice-detail') }}">Rice</a></button>
@@ -51,7 +51,7 @@ buyers.</p>
                 <div class="btn-card-interest-to-export">
                   <button >Interest to Export</button>
                 </div>
-          
+
               <div class="card-no">
                 <p>01</p>
               </div>
@@ -66,7 +66,7 @@ buyers.</p>
                  <h5>Fruits & Fruit Products</h5>
                  <p>Fresh and processed fruits harvested at peak
 ripeness for maximum flavor and quality.
-</p>    
+</p>
                 <div class="smaill-detail-card">
                 <button><a href="{{ route('rice-detail') }}">Fresh Mangoo</a></button>
                <button>Dried Mango</button>
@@ -86,8 +86,8 @@ ripeness for maximum flavor and quality.
             <img class="card-product-bg" src="{{ asset('assets/images/export-card-product-3.png') }}">
              <div class="card-product-detail">
                  <h5>Nuts & Legumes</h5>
-                 <p>Premium-grade nuts and legumes sourced 
-from trusted Cambodian farmers.</p>    
+                 <p>Premium-grade nuts and legumes sourced
+from trusted Cambodian farmers.</p>
                 <div class="smaill-detail-card">
                 <button><a href="{{ route('rice-detail') }}">Cashew Nuts</a></button>
                <button>Peanuts</button>
@@ -108,8 +108,8 @@ from trusted Cambodian farmers.</p>
             <img class="card-product-bg" src="{{ asset('assets/images/export-card-product-4.png') }}">
              <div class="card-product-detail">
                  <h5>Root Crops</h5>
-                 <p>Processed and dried cassava ideal for 
-industrial and export applications.</p>    
+                 <p>Processed and dried cassava ideal for
+industrial and export applications.</p>
                 <div class="smaill-detail-card">
                 <button><a href="{{ route('rice-detail') }}">Dried Cassava</a></button>
                 </div>
@@ -129,11 +129,11 @@ industrial and export applications.</p>
             <img class="card-product-bg" src="{{ asset('assets/images/export-card-product-5.png') }}">
              <div class="card-product-detail">
                  <h5>Spices</h5>
-                 <p>Aromatic Cambodian pepper known for 
-its global reputation and rich flavor profile.</p>    
+                 <p>Aromatic Cambodian pepper known for
+its global reputation and rich flavor profile.</p>
                 <div class="smaill-detail-card">
                 <button><a href="{{ route('rice-detail') }}">Pepper</a></button>
-    
+
                 </div>
                 <div class="btn-card-interest-to-export">
                   <button >Interest to Export</button>
@@ -151,9 +151,9 @@ its global reputation and rich flavor profile.</p>
             <img class="card-product-bg" src="{{ asset('assets/images/export-card-product-6.png') }}">
              <div class="card-product-detail">
                  <h5>Coffee & Beverages</h5>
-                 <p>Premium Cambodian coffee beans carefully 
-selected and exported with international 
-standards.</p>    
+                 <p>Premium Cambodian coffee beans carefully
+selected and exported with international
+standards.</p>
                 <div class="smaill-detail-card">
                 <button><a  href="{{ route('rice-detail') }}">Coffee Beans</a></button>
                 </div>
@@ -177,7 +177,7 @@ standards.</p>
   <div class="partner-main">
     <img class="partner-bg" src="{{ asset('assets/images/bg-3.png') }}">
     <h1>Why Partner with RSL Trading?</h1>
-    
+
     <div class="partner-card-wrapper">
       <div class="partner-card">
          <svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -272,10 +272,10 @@ standards.</p>
   <input class="col-12" placeholder="Mobile Phone ">
 </div>
 
-<div class="col-lg-6 col-md-6 input-field"> 
+<div class="col-lg-6 col-md-6 input-field">
   <input class="col-12" placeholder="Company Name">
 </div>
- 
+
 <div class="col-lg-6 col-md-6 input-field">
  <select class="form-select" aria-label="Default select example">
  <option selected>Import</option>

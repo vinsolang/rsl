@@ -12,7 +12,7 @@
 
 @section('content')
     <section>
-        <div class="main-banner">
+        <div class="main-banner" style="background-image: url('{{ asset('assets/images/banner-img-1.png') }}')">
             {{-- <img class="img-banner" src="{{ asset('assets/images/banner-img-1.png') }}"> --}}
             <video autoplay muted class="home-banner-logo">
                 <source src="{{ asset('assets/videos/LOGO.webm') }}">
