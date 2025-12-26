@@ -1286,16 +1286,11 @@
     <section>
         <div class="main-banner bg-cover" style="background-image: url('{{ asset('assets/images/banner-img-1.png') }}')">
             {{-- <img class="img-banner" src="{{ asset('assets/images/banner-img-1.png') }}"> --}}
-            <video autoplay muted loop playsinline class="home-banner-logo">
-                <!-- WebM for Chrome/Firefox/Edge -->
+            <video id="logoVideo" autoplay muted loop playsinline class="home-banner-logo hidden">
                 <source src="{{ asset('assets/videos/LOGO.webm') }}" type="video/webm">
-
-                <!-- MOV HEVC for Safari/iPhone -->
-                <source src="{{ asset('assets/videos/LOGO.mov') }}" type="video/mp4">
-{{-- 
-                <!-- Optional fallback image -->
-                <img src="{{ asset('assets/images/LOGO.png') }}" alt="Logo"> --}}
             </video>
+
+            <img id="logoImg" src="{{ asset('assets/images/logo.png') }}" class="home-banner-logo" alt="Logo">
 
 
             <div class="home-banner-context">
@@ -2156,6 +2151,13 @@
             </div>
         </form>
     </section>
+
+    <script>
+        if (!/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+            logoVideo.classList.remove('hidden')
+            logoImg.classList.add('hidden')
+        }
+    </script>
 @endsection
 
 
