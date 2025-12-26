@@ -191,14 +191,14 @@
         }
 
         /* @media screen and (max-width: 1440px) and (min-width: 768px) {
-                .first-card {
-                    position: relative;
-                    width: 100%;
-                    height: 170vh;
-                    padding-top: 18rem;
-                    margin-top: -15% !important;
-                }
-            } */
+                    .first-card {
+                        position: relative;
+                        width: 100%;
+                        height: 170vh;
+                        padding-top: 18rem;
+                        margin-top: -15% !important;
+                    }
+                } */
 
         .main-banner {
             width: 100%;
@@ -232,7 +232,7 @@
         }
 
         .wrapper-contact {
-            margin-top: 15rem;
+            margin-top: 5rem;
             margin-bottom: 5rem;
             padding-top: 1rem;
             width: 100%;
@@ -804,9 +804,11 @@
                         <h1 data-aos="zoom-in-up" data-aos-duration="1000">Activites</h1>
                     </div>
                     <div class="main-banner-p-bg">
-                        <p data-aos="zoom-in-up" data-aos-duration="1200">​​​Your Trusted Partner in Cambodian Agricultural Exports</p>
+                        <p data-aos="zoom-in-up" data-aos-duration="1200">​​​Your Trusted Partner in Cambodian Agricultural
+                            Exports</p>
                     </div>
-                    <a data-aos="zoom-in-up" data-aos-duration="1400" href="#contact"><button class="btn-Interest-to-export">Interest to
+                    <a data-aos="zoom-in-up" data-aos-duration="1400" href="#contact"><button
+                            class="btn-Interest-to-export">Interest to
                             Export</button></a>
                 </div>
             </div>
@@ -819,78 +821,38 @@
             <div class="first-card-background">
                 <img src="{{ asset('assets/images/second-bg.png') }}">
             </div>
-            <div class="main-card-product">
-                <div class="container">
+            <div class="w-full max-w-7xl mx-auto pt-20">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
+                    <div class="relative overflow-hidden group bg-black" data-aos="fade-up" data-aos-duration="1000">
+                        <img src="{{ asset('assets/images/Activites-2.JPG') }}" alt="Image"
+                            class="w-full h-[500px] object-cover object-bottom transition-all duration-300 group-hover:opacity-50">
 
+                        <div
+                            class="absolute bottom-[-100%] left-0 w-full bg-black/60 text-white px-4 py-4 transition-all duration-300 text-[12px] group-hover:bottom-0 ">
+                            <h1 class="text-[14px] md:text-[15px] font-[700]">Visit rice mills in Battambang province.</h1>
 
-
-                    <div class="first-event-conten">
-                        <img src="{{ asset('assets/images/Activites-1.JPG') }}">
-                        <div class="event-content">
-                            <h5>Headline Title</h5>
-                            <p>
-                                Founded in 2015, RSL Trading is a Cambodian leader in agricultural exports, dedicated to
-                                connecting local farmers with global markets. Our goal is to bring the finest “Made in
-                                Cambodia” products—such as rice, coffee, corn, cashew nuts, mangoes, and cassava—to buyers
-                                worldwide while supporting farmers with better opportunities and incomes.</p>
                         </div>
                     </div>
+                    <div class="relative overflow-hidden group bg-black" data-aos="fade-up" data-aos-duration="1000">
+                        <img src="{{ asset('assets/images/Activites-4.JPG') }}" alt="Image"
+                            class="w-full h-[500px] object-cover object-bottom transition-all duration-300 group-hover:opacity-50">
 
+                        <div
+                            class="absolute bottom-[-100%] left-0 w-full bg-black/60 text-white px-4 py-4 transition-all duration-300 text-[12px] group-hover:bottom-0 ">
+                            <h1 class="text-[14px] md:text-[15px] font-[700]">Rice packing activities in Kandal province.</h1>
 
-                    <div class="event-card-wrapper">
-
-                        <div class="event-content">
-                            <h5>Headline Title123</h5>
-                            <p>
-                                Founded in 2015, RSL Trading is a Cambodian leader in agricultural exports, dedicated to
-                                connecting local farmers with global markets. Our goal is to bring the finest “Made in
-                                Cambodia” products—such as rice, coffee, corn, cashew nuts, mangoes, and cassava—to buyers
-                                worldwide while supporting farmers with better opportunities and incomes.</p>
-                        </div>
-
-                        <div class="event-img">
-                            <img src="{{ asset('assets/images/Activites-3.JPG') }}">
                         </div>
                     </div>
+                    <div class="relative overflow-hidden group bg-black" data-aos="fade-up" data-aos-duration="1000">
+                        <img src="{{ asset('assets/images/Activites-5.JPG') }}" alt="Image"
+                            class="w-full h-[500px] object-cover object-bottom transition-all duration-300 group-hover:opacity-50">
 
+                        <div
+                            class="absolute bottom-[-100%] left-0 w-full bg-black/60 text-white px-4 py-4 transition-all duration-300 text-[12px] group-hover:bottom-0 ">
+                            <h1 class="text-[14px] md:text-[15px] font-[700]">Harvesting activities in Battambang province.</h1>
 
-                    <div class="event-card-wrapper">
-                        <div class="event-img">
-                            <img src="{{ asset('assets/images/Activites-4.JPG') }}">
-                        </div>
-
-                        <div class="event-content">
-                            <h5>Headline Title</h5>
-                            <p>
-                                Founded in 2015, RSL Trading is a Cambodian leader in agricultural exports, dedicated to
-                                connecting local farmers with global markets. Our goal is to bring the finest “Made in
-                                Cambodia” products—such as rice, coffee, corn, cashew nuts, mangoes, and cassava—to buyers
-                                worldwide while supporting farmers with better opportunities and incomes.</p>
                         </div>
                     </div>
-
-
-                    <div class="event-card-wrapper">
-
-                        <div class="event-content">
-                            <h5>Headline Title</h5>
-                            <p>
-                                Founded in 2015, RSL Trading is a Cambodian leader in agricultural exports, dedicated to
-                                connecting local farmers with global markets. Our goal is to bring the finest “Made in
-                                Cambodia” products—such as rice, coffee, corn, cashew nuts, mangoes, and cassava—to buyers
-                                worldwide while supporting farmers with better opportunities and incomes.</p>
-                        </div>
-
-                        <div class="event-img">
-                            <img src="{{ asset('assets/images/Activites-5.JPG') }}">
-                        </div>
-                    </div>
-
-
-
-
-
-
                 </div>
             </div>
         </div>

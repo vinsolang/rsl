@@ -293,7 +293,7 @@
         <img class="footer-bg" src="{{ asset('assets/images/footer-bg.png') }}">
 
         <div class="footer-content">
-            <div class="footer-navigate">             
+            <div class="footer-navigate">
                 <h5>{{ app()->getLocale() === 'en' ? 'Navigation' : (app()->getLocale() === 'km' ? 'Navigation' : 'Navigation') }}</h5>
 
                 <li><a href="{{ route('home') }}">
@@ -320,12 +320,14 @@
 
             </div>
             <div class="footer-address">
-                <h5>Full Office Address</h5>
+                {{-- <h5>Full Office Address</h5> --}}
 
-                <li><a style="color: #FFFFFF">#202, Borey 999 Honey, 2nd Floor, Street 355, Group 03, Village 1 , Boeng
-                        Kak 1 Commune, Toul Kork District, Phnom Penh</a></li>
+                <li><a style="color: #FFFFFF">{{ app()->getLocale() === 'en' ? '#202, Borey 999 Honey, 2nd Floor, Street 355, Group 03, Village 1 , Boeng
+                        Kak 1 Commune, Toul Kork District, Phnom Penh' : (app()->getLocale() === 'km' ? '#202, Borey 999 Honey, 2nd Floor, Street 355, Group 03, Village 1 , Boeng
+                        Kak 1 Commune, Toul Kork District, Phnom Penh' : '#202, Borey 999 Honey, 2nd Floor, Street 355, Group 03, Village 1 , Boeng
+                        Kak 1 Commune, Toul Kork District, Phnom Penh') }}</a></li>
                 <li>
-                    <h5 class="mt-3" style="text-decoration: underline;">info@rsltrading.com</h5>
+                    <h5 class="mt-3">info@rsltrading.com</h5>
                 </li>
                 <li>
                     <h5 class="mt-3">+855 77 678 300</h5>
@@ -333,7 +335,7 @@
                 <li>
                     <h5 class="mt-3">Operation Hour</h5>
                 </li>
-                <li>Mon - Fri </li>
+                <li>{{ app()->getLocale() === 'en' ? 'Mon - Fri' : (app()->getLocale() === 'km' ? 'Mon - Fri' : 'Mon - Fri') }} </li>
                 <li>8:00am - 5:00pm</li>
 
             </div>
@@ -343,7 +345,7 @@
             <div class="footer-social">
                 <img src="{{ asset('assets/images/footer-logo.png') }}">
 
-                <h5 class="">Follow Us</h5>
+                <h5 class="">{{ app()->getLocale() === 'en' ? 'Follow Us' : (app()->getLocale() === 'km' ? 'Follow Us' : 'Follow Us') }}</h5>
 
                 <div class="link-social">
                     <a href="https://www.facebook.com/rsltradingcambodia" target="_blank"><svg width="27"
@@ -368,14 +370,17 @@
             </div>
 
 
-
-
-
             <div class="footer-company">
-                <p>Founded in 2015, RSL Trading is a Cambodian leader in agricultural exports, dedicated to connecting
+                <p>{{ app()->getLocale() === 'en' ? 'Founded in 2015, RSL Trading is a Cambodian leader in agricultural exports, dedicated to connecting
                     local farmers with global markets. Our goal is to bring the finest “Made in Cambodia” products such
                     as rice, coffee, corn, cashew nuts, mangoes, and cassava and other nutrient fruits—to buyers
-                    worldwide while supporting farmers with better opportunities and incomes.</p>
+                    worldwide while supporting farmers with better opportunities and incomes.' : (app()->getLocale() === 'km' ? 'Founded in 2015, RSL Trading is a Cambodian leader in agricultural exports, dedicated to connecting
+                    local farmers with global markets. Our goal is to bring the finest “Made in Cambodia” products such
+                    as rice, coffee, corn, cashew nuts, mangoes, and cassava and other nutrient fruits—to buyers
+                    worldwide while supporting farmers with better opportunities and incomes.' : 'Founded in 2015, RSL Trading is a Cambodian leader in agricultural exports, dedicated to connecting
+                    local farmers with global markets. Our goal is to bring the finest “Made in Cambodia” products such
+                    as rice, coffee, corn, cashew nuts, mangoes, and cassava and other nutrient fruits—to buyers
+                    worldwide while supporting farmers with better opportunities and incomes.') }}</p>
                 <div class="company-bg">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.297500132666!2d104.86175!3d11.6021264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31095385a229bec1%3A0xada2a43a8ca90037!2z4Z6Y4Z-Q4Z6a4Z6V4Z-S4Z6b4Z654Z6fIE1vcmUgUGx1cw!5e0!3m2!1sen!2skh!4v1766630998356!5m2!1sen!2skh"

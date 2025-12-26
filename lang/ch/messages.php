@@ -1,5 +1,27 @@
 <?php
 
 return [
-    "home" => "Homech",
+    "q" => 'Q:',
+    "q1" => "What Cambodian products does RSL Trading export?",
+    "a1" => "A: RSL Trading exports premium Cambodian agricultural products, including rice, coffee beans, corn, cashew nuts, mangoes, and cassava. All products are sourced directly from local farmers in Cambodia.",
+    "q2" => "What is the minimum order quantity (MOQ) for exports?",
+    "a2" => "A: MOQ varies depending on the product and destination. Contact our export team in Phnom Penh for customized details.",
+    "q3" => "Which countries do you export to?",
+    "a3" => "A: We currently export to international markets, including Russia, and are expanding globally to bring Cambodian agricultural products to buyers worldwide.",
+    "q4"=> "How does RSL Trading ensure product quality and safe delivery?",
+    "a4"=> "A: All Cambodian products are carefully sourced, inspected, and packaged to meet international standards. As an affiliate of RSL Global Logistics, we professionally handle cargo, shipping, and export documentation to ensure smooth delivery worldwide.",
+    "q5" => "Can RSL Trading provide custom packaging or labeling for buyers?",
+    "a5" => "A: Yes. We can accommodate custom packaging and labeling to meet the requirements of international buyers.",
+    "q6" => "How can I order Cambodian agricultural products from RSL Trading?",
+    "a6" => "A: Buyers can contact RSL Trading in Phnom Penh via our website, phone, or email. Our team will guide you through product selection, pricing, shipping, and customs documentation.",
+    "q7" => "How can I order Cambodian agricultural products from RSL Trading?",
+    "a7" => "A: Farmers from across Cambodia can partner with RSL Trading to export rice, coffee, corn, fruits, and other crops. We guide farmers on quality standards, harvesting, and packaging to meet export requirements.",
+    "q8" => "How does RSL Trading ensure fair pricing for farmers?",
+    "a8" => "A: We assess local and international market prices and provide competitive, transparent rates to help Cambodian farmers earn sustainable income.",
+    "q9" => "How does RSL Trading ensure fair pricing for farmers?",
+    "a9" => "A: We help farmers access global markets, provide fair and transparent pricing, and offer guidance on agricultural best practices and quality improvements.",
+    "q10" => "How does RSL Trading ensure fair pricing for farmers?",
+    "a10" => "A: RSL Trading works with rice, coffee, corn, cashew nuts, mangoes, cassava, and other agricultural products that meet international quality standards.",
+    "q11" => "How does RSL Trading ensure fair pricing for farmers?",
+    "a11" => "A: We assess local and international market prices and provide competitive, transparent rates to help Cambodian farmers earn sustainable income.",
 ];

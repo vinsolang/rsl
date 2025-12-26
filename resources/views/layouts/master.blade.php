@@ -140,47 +140,47 @@
     <script>
         const counters = document.querySelectorAll(".counter");
 
-        function animateCount(counter) {
-            const target = +counter.getAttribute("data-target");
-            const duration = 2000;
-            let start = 0;
+function animateCount(counter) {
+    const target = parseInt(
+        counter.getAttribute("data-target").replace(/,/g, ""),
+        10
+    );
 
-            const step = () => {
-                const increment = target / (duration / 16);
-                start += increment;
+    const duration = 2000;
+    let start = 0;
+    const increment = target / (duration / 16);
 
-                let value = Math.floor(start);
+    const step = () => {
+        start += increment;
+        let value = Math.floor(start);
 
-                // decide suffix
-                let suffix = "";
-                if (counter.classList.contains("plus")) suffix = "+";
-                if (counter.classList.contains("percent")) suffix = "%";
+        // suffix
+        let suffix = "";
+        if (counter.classList.contains("plus")) suffix = "+";
+        if (counter.classList.contains("percent")) suffix = "%";
 
-                if (start < target) {
-                    counter.textContent = value + suffix;
-                    requestAnimationFrame(step);
-                } else {
-                    counter.textContent = target + suffix;
-                }
-            };
-
-            step();
+        if (value < target) {
+            counter.textContent = value.toLocaleString() + suffix;
+            requestAnimationFrame(step);
+        } else {
+            counter.textContent = target.toLocaleString() + suffix;
         }
+    };
 
-        const observer = new IntersectionObserver(
-            (entries, obs) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        animateCount(entry.target);
-                        obs.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.3
-            }
-        );
+    step();
+}
 
-        counters.forEach(counter => observer.observe(counter));
+const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCount(entry.target);
+            obs.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.3 });
+
+counters.forEach(counter => observer.observe(counter));
+
 
 
 

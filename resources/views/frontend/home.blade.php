@@ -1300,13 +1300,13 @@
 
             <div class="home-banner-context">
                 {{-- <h5 class="popup">{{ __('messages.home') }}</h5> --}}
-                <h5 data-aos="zoom-in-up" data-aos-duration="1000">WELCOME TO</h5>
-                <h1 data-aos="zoom-in-up" data-aos-duration="1200">RSL TRADING</h1>
-                <h3 data-aos="zoom-in-up" data-aos-duration="1400">Health Life Future</h3>
+                <h5 class="uppercase" data-aos="zoom-in-up" data-aos-duration="1000">{{ app()->getLocale() === 'en' ? 'Welcome to' : (app()->getLocale() === 'km' ? 'Welcome to' : 'Welcome to') }}</h5>
+                <h1 data-aos="zoom-in-up" data-aos-duration="1200">{{ app()->getLocale() === 'en' ? 'RSL TRADING' : (app()->getLocale() === 'km' ? 'RSL TRADING' : 'RSL TRADING') }}</h1>
+                <h3 data-aos="zoom-in-up" data-aos-duration="1400">{{ app()->getLocale() === 'en' ? 'Health Life Future' : (app()->getLocale() === 'km' ? 'Health Life Future' : 'Health Life Future') }}</h3>
 
                 <button class="btn-explore-our-exports" data-aos="zoom-in-up" data-aos-duration="1600">
                     <img src="{{ asset('assets/images/btn-submit-bg.png') }}">
-                    <p><a href="{{ route('export') }}#rice">Explore Our Exports</a></p>
+                    <p><a href="{{ route('export') }}#rice">{{ app()->getLocale() === 'en' ? 'Explore Our Exports' : (app()->getLocale() === 'km' ? 'Explore Our Exports' : 'Explore Our Exports') }}</a></p>
                 </button>
             </div>
         </div>
@@ -1324,17 +1324,25 @@
         <div
             class="relative z-20 w-full h-full max-w-7xl mx-auto flex flex-col items-center justify-center text-center font-[700] pt-40">
 
-            <h2 class="text-[#8DC640] text-[20px] md:text-[25px] welcome-to-text">Welcome to</h2>
+            <h2 class="text-[#8DC640] text-[20px] md:text-[25px] welcome-to-text">{{ app()->getLocale() === 'en' ? 'Welcome to' : (app()->getLocale() === 'km' ? 'Welcome to' : 'Welcome to') }}</h2>
 
             <h1 class="text-[30px] md:text-[50px] text-[#059848] leading-tight fw-bolder">
-                RSL TRADING
+                {{ app()->getLocale() === 'en' ? 'RSL TRADING' : (app()->getLocale() === 'km' ? 'RSL TRADING' : 'RSL TRADING') }}
             </h1>
 
-            <p class="text-[14px] md:text-[16px] font-[400] pt-4  md:px-10">
-                Founded in 2015, RSL Trading Co., LTD. focuses on Agriculture Products for Local and International Markets,
+            <p class="text-[14px] md:text-[16px] font-[400] pt-4 md:px-10">
+                {{ app()->getLocale() === 'en' ? 'Founded in 2015, RSL Trading Co., LTD. focuses on Agriculture Products for Local and International Markets,
                 dedicated to connecting local farmers with us to bring agriculture products such as Rice, Coffee, Pepper,
                 Banana, Cashew Nuts, Mango, Dried Mango, Dried Cassava and other several local products to buyers worldwide
-                while supporting them for better opportunities and incomes.
+                while supporting them for better opportunities and incomes.' : (app()->getLocale() === 'km' ? 'Founded in 2015, RSL Trading Co., LTD. focuses on Agriculture Products for Local and International Markets,
+                dedicated to connecting local farmers with us to bring agriculture products such as Rice, Coffee, Pepper,
+                Banana, Cashew Nuts, Mango, Dried Mango, Dried Cassava and other several local products to buyers worldwide
+                while supporting them for better opportunities and incomes.' : 'Founded in 2015, RSL Trading Co., LTD. focuses on Agriculture Products for Local and International Markets,
+                dedicated to connecting local farmers with us to bring agriculture products such as Rice, Coffee, Pepper,
+                Banana, Cashew Nuts, Mango, Dried Mango, Dried Cassava and other several local products to buyers worldwide
+                while supporting them for better opportunities and incomes.') }}
+
+                
             </p>
 
 
@@ -1351,8 +1359,8 @@
             <img class="we-start-bg" src="{{ asset('assets/images/bg-2.png') }}">
             <div class="we-start-context">
                 <div class="-mt-[6rem] 2xl:-mt-[10rem]" class="context-one">
-                    <h5 class="!text-[20px] md:!text-[30px] !text-[#059848] !text-center">Why We Started</h5>
-                    <p>“We help local farmers by creating global opportunities for Cambodian agricultural products.”</p>
+                    <h5 class="!text-[20px] md:!text-[30px] !text-[#059848] !text-center">{{ app()->getLocale() === 'en' ? 'Why We Started ?' : (app()->getLocale() === 'km' ? 'Why We Started ?' : 'Why We Started ?') }}</h5>
+                    <p>{{ app()->getLocale() === 'en' ? '“We help local farmers by creating global opportunities for Cambodian agricultural products.”' : (app()->getLocale() === 'km' ? '“We help local farmers by creating global opportunities for Cambodian agricultural products.”' : '“We help local farmers by creating global opportunities for Cambodian agricultural products.”') }}</p>
                 </div>
             </div>
 
@@ -1368,7 +1376,7 @@
 
     {{-- Commodities --}}
     <section>
-        <h5 class="text-[20px] md:text-[30px] text-[#059848] text-center pt-10">Our Main Commodities</h5>
+        <h5 class="text-[20px] md:text-[30px] text-[#059848] text-center pt-10">{{ app()->getLocale() === 'en' ? 'Our Main Commodities' : (app()->getLocale() === 'km' ? 'Our Main Commodities' : 'Our Main Commodities') }}</h5>
         <div class="container">
             <div class="row">
 
@@ -1376,13 +1384,14 @@
                     <div class="card">
                         <img src="{{ asset('assets/images/card-1.png') }}">
                         <div class="card-content">
-                            <h4>Rice</h4>
-                            <p>We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
-                                tropical fruits to countries worldwide.</p>
+                            <h4>{{ app()->getLocale() === 'en' ? 'Rice' : (app()->getLocale() === 'km' ? 'Rice' : 'Rice') }}</h4>
+                            <p>{{ app()->getLocale() === 'en' ? 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
+                                tropical fruits to countries worldwide.' : (app()->getLocale() === 'km' ? 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
+                                tropical fruits to countries worldwide.' : 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
+                                tropical fruits to countries worldwide.') }}</p>
 
                             <div class="wrapper-card-content">
-                                <a href="{{ route('export') }}#rice"><button class="btn-explore">Explore
-                                        More</button></a>
+                                <a href="{{ route('export') }}#rice"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'Explore More' : 'Explore More') }}</button></a>
                                 <h1>.01</h1>
                             </div>
 
@@ -1400,13 +1409,14 @@
                     <div class="card">
                         <img src="{{ asset('assets/images/card-2.png') }}">
                         <div class="card-content">
-                            <h4>Coffee</h4>
-                            <p>We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
-                                tropical fruits to countries worldwide.</p>
+                            <h4>{{ app()->getLocale() === 'en' ? 'Coffee' : (app()->getLocale() === 'km' ? 'Coffee' : 'Coffee') }}</h4>
+                            <p>{{ app()->getLocale() === 'en' ? 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
+                                tropical fruits to countries worldwide.' : (app()->getLocale() === 'km' ? 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
+                                tropical fruits to countries worldwide.' : 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
+                                tropical fruits to countries worldwide.') }}</p>
 
                             <div class="wrapper-card-content">
-                                <a href="{{ route('export') }}#coffee"><button class="btn-explore">Explore
-                                        More</button></a>
+                                <a href="{{ route('export') }}#coffee"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'Explore More' : 'Explore More') }}</button></a>
                                 <h1>.02</h1>
                             </div>
 
@@ -1424,12 +1434,14 @@
                     <div class="card">
                         <img src="{{ asset('assets/images/card-3.png') }}">
                         <div class="card-content">
-                            <h4>Corn</h4>
-                            <p>We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
-                                tropical fruits to countries worldwide.</p>
+                            <h4>{{ app()->getLocale() === 'en' ? 'Corn' : (app()->getLocale() === 'km' ? 'Corn' : 'Corn') }}</h4>
+                            <p>{{ app()->getLocale() === 'en' ? 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
+                                tropical fruits to countries worldwide.' : (app()->getLocale() === 'km' ? 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
+                                tropical fruits to countries worldwide.' : 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
+                                tropical fruits to countries worldwide.') }}</p>
 
                             <div class="wrapper-card-content">
-                                <a href="{{ route('export') }}#rice"><button class="btn-explore">Explore More</button></a>
+                                <a href="{{ route('export') }}#rice"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'Explore More' : 'Explore More') }}</button></a>
                                 <h1>.03</h1>
                             </div>
 
@@ -1448,13 +1460,14 @@
                     <div class="card">
                         <img src="{{ asset('assets/images/card-4.png') }}">
                         <div class="card-content">
-                            <h4>Cashew Nuts</h4>
-                            <p>We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
-                                tropical fruits to countries worldwide.</p>
+                            <h4>{{ app()->getLocale() === 'en' ? 'Cashew Nuts' : (app()->getLocale() === 'km' ? 'Cashew Nuts' : 'Cashew Nuts') }}</h4>
+                            <p>{{ app()->getLocale() === 'en' ? 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
+                                tropical fruits to countries worldwide.' : (app()->getLocale() === 'km' ? 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
+                                tropical fruits to countries worldwide.' : 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
+                                tropical fruits to countries worldwide.') }}</p>
 
                             <div class="wrapper-card-content">
-                                <a href="{{ route('export') }}#nuts"><button class="btn-explore">Explore
-                                        More</button></a>
+                                <a href="{{ route('export') }}#nuts"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'Explore More' : 'Explore More') }}</button></a>
                                 <h1>.04</h1>
                             </div>
 
@@ -1473,13 +1486,14 @@
                     <div class="card">
                         <img src="{{ asset('assets/images/card-5.png') }}">
                         <div class="card-content">
-                            <h4>Potato / Cassava</h4>
-                            <p>We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
-                                tropical fruits to countries worldwide.</p>
+                            <h4>{{ app()->getLocale() === 'en' ? 'Potato / Cassava' : (app()->getLocale() === 'km' ? 'Potato / Cassava' : 'Potato / Cassava') }}</h4>
+                            <p>{{ app()->getLocale() === 'en' ? 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
+                                tropical fruits to countries worldwide.' : (app()->getLocale() === 'km' ? 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
+                                tropical fruits to countries worldwide.' : 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
+                                tropical fruits to countries worldwide.') }}</p>
 
                             <div class="wrapper-card-content">
-                                <a href="{{ route('export') }}#root_crops"><button class="btn-explore">Explore
-                                        More</button></a>
+                                <a href="{{ route('export') }}#root_crops"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'Explore More' : 'Explore More') }}</button></a>
                                 <h1>.05</h1>
                             </div>
 
@@ -1498,13 +1512,14 @@
                     <div class="card">
                         <img src="{{ asset('assets/images/card-6.png') }}">
                         <div class="card-content">
-                            <h4>Mango</h4>
-                            <p>We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
-                                tropical fruits to countries worldwide.</p>
+                            <h4>{{ app()->getLocale() === 'en' ? 'Mango' : (app()->getLocale() === 'km' ? 'Mango' : 'Mango') }}</h4>
+                            <p>{{ app()->getLocale() === 'en' ? 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
+                                tropical fruits to countries worldwide.' : (app()->getLocale() === 'km' ? 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
+                                tropical fruits to countries worldwide.' : 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
+                                tropical fruits to countries worldwide.') }}</p>
 
                             <div class="wrapper-card-content">
-                                <a href="{{ route('export') }}#fruits"><button class="btn-explore">Explore
-                                        More</button></a>
+                                <a href="{{ route('export') }}#fruits"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'Explore More' : 'Explore More') }}</button></a>
                                 <h1>.06</h1>
                             </div>
 
@@ -1529,7 +1544,7 @@
 
             <div class="achievement-content">
 
-                <h4>Acheivement in Number</h4>
+                <h4>{{ app()->getLocale() === 'en' ? 'Acheivement in Number' : (app()->getLocale() === 'km' ? 'Acheivement in Number' : 'Acheivement in Number') }}</h4>
 
                 <div class="container wrapper-achievement-card">
                     <div class="row">
@@ -1541,8 +1556,8 @@
                                 </div>
 
                                 <div class="achievement-card-content">
-                                    <h1 class="counter plus" data-target="1000">0</h1>
-                                    <p>local farmers supported</p>
+                                    <h1 class="counter plus" data-target="1,000">0</h1>
+                                    <p>{{ app()->getLocale() === 'en' ? 'local farmers supported' : (app()->getLocale() === 'km' ? 'local farmers supported' : 'local farmers supported') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -1554,8 +1569,8 @@
                                 </div>
 
                                 <div class="achievement-card-content">
-                                    <h1 class="counter plus" data-target="5">0</h1>
-                                    <p>Continents Export</p>
+                                    <h1 class="counter no" data-target="5">0</h1>
+                                    <p>{{ app()->getLocale() === 'en' ? 'Continents Export' : (app()->getLocale() === 'km' ? 'Continents Export' : 'Continents Export') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -1569,7 +1584,7 @@
 
                                 <div class="achievement-card-content">
                                     <h1 class="counter plus" data-target="500">0</h1>
-                                    <p>Export Commodities</p>
+                                    <p>{{ app()->getLocale() === 'en' ? 'Export Commodities' : (app()->getLocale() === 'km' ? 'Export Commodities' : 'Export Commodities') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -1583,7 +1598,7 @@
 
                                 <div class="achievement-card-content">
                                     <h1 class="counter plus" data-target="10">0</h1>
-                                    <p>Years in Operation</p>
+                                    <p>{{ app()->getLocale() === 'en' ? 'Years in Operation' : (app()->getLocale() === 'km' ? 'Years in Operation' : 'Years in Operation') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -1596,7 +1611,7 @@
 
                                 <div class="achievement-card-content">
                                     <h1 class="counter percent" data-target="20">0</h1>
-                                    <p>Farmers Sources</p>
+                                    <p>{{ app()->getLocale() === 'en' ? 'Farmers Sources' : (app()->getLocale() === 'km' ? 'Farmers Sources' : 'Farmers Sources') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -1610,7 +1625,7 @@
 
                                 <div class="achievement-card-content">
                                     <h1 class="counter percent" data-target="80">0</h1>
-                                    <p>Communities Sources</p>
+                                    <p>{{ app()->getLocale() === 'en' ? 'Communities Sources' : (app()->getLocale() === 'km' ? 'Communities Sources' : 'Communities Sources') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -1635,18 +1650,16 @@
         <div class="FAQ-background">
             <div class="container">
                 <div class="FAQ-content">
-                    <h1>Frequently Asked Questions</h1>
-                    <h5>For buyers/Importers</h5>
+                    <h1>{{ app()->getLocale() === 'en' ? 'Frequently Asked Questions' : (app()->getLocale() === 'km' ? 'Frequently Asked Questions' : 'Frequently Asked Questions') }}</h1>
+                    <h5>{{ app()->getLocale() === 'en' ? 'For buyers/Importers' : (app()->getLocale() === 'km' ? 'For buyers/Importers' : 'For buyers/Importers') }}</h5>
                 </div>
 
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-12">
                         <div class="drop-down-card">
                             <div class="qanda">
-                                <p class="question"><span>Q:</span> What Cambodian products does RSL Trading export?</p>
-                                <p class="answer">A: RSL Trading exports premium Cambodian agricultural products, including
-                                    rice, coffee beans, corn, cashew nuts, mangoes, and cassava. All products are sourced
-                                    directly from local farmers in Cambodia.</p>
+                                <p class="question"><span>{{ __('messages.q') }}</span> {{ __('messages.q1') }}</p>
+                                <p class="answer">{{ __('messages.a1') }}</p>
                             </div>
 
                             <button onclick="toggleDropdown(this)">
@@ -1664,10 +1677,9 @@
                     <div class="col-lg-6 col-md-6 col-12">
                         <div class="drop-down-card">
                             <div class="qanda">
-                                <p class="question"><span>Q:</span>What is the minimum order quantity (MOQ) for exports?
+                                <p class="question"><span>{{ __('messages.q') }}</span> {{ __('messages.q2') }}
                                 </p>
-                                <p class="answer">A: MOQ varies depending on the product and destination. Contact our
-                                    export team in Phnom Penh for customized details.</p>
+                                <p class="answer">{{ __('messages.a2') }}</p>
                             </div>
 
                             <button onclick="toggleDropdown(this)">
@@ -1686,9 +1698,8 @@
                     <div class="col-lg-6 col-md-6 col-12">
                         <div class="drop-down-card">
                             <div class="qanda">
-                                <p class="question"><span>Q:</span> Which countries do you export to?</p>
-                                <p class="answer">A:  We currently export to international markets, including Russia, and
-                                    are expanding globally to bring Cambodian agricultural products to buyers worldwide.
+                                <p class="question"><span>{{ __('messages.q') }}</span> {{ __('messages.q3') }}</p>
+                                <p class="answer">{{ __('messages.a3') }}
                                 </p>
                             </div>
 
@@ -1708,12 +1719,8 @@
                     <div class="col-lg-6 col-md-6 col-12">
                         <div class="drop-down-card">
                             <div class="qanda">
-                                <p class="question"><span>Q:</span> How does RSL Trading ensure product quality and safe
-                                    delivery?</p>
-                                <p class="answer">A: All Cambodian products are carefully sourced, inspected, and packaged
-                                    to meet international standards. As an affiliate of RSL Global Logistics, we
-                                    professionally handle cargo, shipping, and export documentation to ensure smooth
-                                    delivery worldwide.
+                                <p class="question"><span>{{ __('messages.q') }}</span> {{ __('messages.q4') }}</p>
+                                <p class="answer">{{ __('messages.a4') }}
                                 </p>
                             </div>
 
@@ -1732,10 +1739,8 @@
                     <div class="col-lg-6 col-md-6 col-12">
                         <div class="drop-down-card">
                             <div class="qanda">
-                                <p class="question"><span>Q:</span> Can RSL Trading provide custom packaging or labeling
-                                    for buyers?</p>
-                                <p class="answer">A:  Yes. We can accommodate custom packaging and labeling to meet the
-                                    requirements of international buyers.</p>
+                                <p class="question"><span>{{ __('messages.q') }}</span> {{ __('messages.q5') }}</p>
+                                <p class="answer">{{ __('messages.a5') }}</p>
                             </div>
 
                             <button onclick="toggleDropdown(this)">
@@ -1754,11 +1759,8 @@
                     <div class="col-lg-6 col-md-6 col-12">
                         <div class="drop-down-card">
                             <div class="qanda">
-                                <p class="question"><span>Q:</span> How can I order Cambodian agricultural products from
-                                    RSL Trading?</p>
-                                <p class="answer">A: Buyers can contact RSL Trading in Phnom Penh via our website, phone,
-                                    or email. Our team will guide you through product selection, pricing, shipping, and
-                                    customs documentation.
+                                <p class="question"><span>{{ __('messages.q') }}</span> {{ __('messages.q6') }}</p>
+                                <p class="answer">{{ __('messages.a6') }}
                                 </p>
                             </div>
 
@@ -1775,7 +1777,7 @@
                     </div>
 
                     <div class="FAQ-content">
-                        <h5>For Sellers / Local Farmers</h5>
+                        <h5>{{ app()->getLocale() === 'en' ? 'For Sellers / Local Farmers' : (app()->getLocale() === 'km' ? 'For Sellers / Local Farmers' : 'For Sellers / Local Farmers') }}</h5>
                     </div>
                     <div class="container">
                         <div class="row">
@@ -1783,11 +1785,8 @@
                             <div class="col-lg-6 col-md-6 col-12">
                                 <div class="drop-down-card">
                                     <div class="qanda">
-                                        <p class="question"><span>Q:</span> How can local farmers supply products to RSL
-                                            Trading?</p>
-                                        <p class="answer">A: Farmers from across Cambodia can partner with RSL Trading to
-                                            export rice, coffee, corn, fruits, and other crops. We guide farmers on quality
-                                            standards, harvesting, and packaging to meet export requirements.</p>
+                                        <p class="question"><span>{{ __('messages.q') }}</span> {{ __('messages.q7') }}</p>
+                                        <p class="answer">{{ __('messages.a7') }}</p>
                                     </div>
 
                                     <button onclick="toggleDropdown(this)">
@@ -1805,11 +1804,8 @@
                             <div class="col-lg-6 col-md-6 col-12">
                                 <div class="drop-down-card">
                                     <div class="qanda">
-                                        <p class="question"><span>Q:</span> How does RSL Trading ensure fair pricing for
-                                            farmers?</p>
-                                        <p class="answer">A:   We assess local and international market prices and provide
-                                            competitive, transparent rates to help Cambodian farmers earn sustainable
-                                            income.</p>
+                                        <p class="question"><span>{{ __('messages.q') }}</span> {{ __('messages.q8') }}</p>
+                                        <p class="answer">{{ __('messages.a8') }}</p>
                                     </div>
 
                                     <button onclick="toggleDropdown(this)">
@@ -1827,11 +1823,8 @@
                             <div class="col-lg-6 col-md-6 col-12">
                                 <div class="drop-down-card">
                                     <div class="qanda">
-                                        <p class="question"><span>Q:</span> What support does RSL Trading provide to
-                                            farmers?</p>
-                                        <p class="answer">A:   We help farmers access global markets, provide fair and
-                                            transparent pricing, and offer guidance on agricultural best practices and
-                                            quality improvements.</p>
+                                        <p class="question"><span>{{ __('messages.q') }}</span> {{ __('messages.q9') }}</p>
+                                        <p class="answer">{{ __('messages.a9') }}</p>
                                     </div>
 
                                     <button onclick="toggleDropdown(this)">
@@ -1849,11 +1842,8 @@
                             <div class="col-lg-6 col-md-6 col-12">
                                 <div class="drop-down-card">
                                     <div class="qanda">
-                                        <p class="question"><span>Q:</span> Which types of Cambodian products are suitable
-                                            for export?</p>
-                                        <p class="answer">A:   RSL Trading works with rice, coffee, corn, cashew nuts,
-                                            mangoes, cassava, and other agricultural products that meet international
-                                            quality standards.</p>
+                                        <p class="question"><span>{{ __('messages.q') }}</span> {{ __('messages.q10') }}</p>
+                                        <p class="answer">{{ __('messages.a10') }}</p>
                                     </div>
 
                                     <button onclick="toggleDropdown(this)">
@@ -1872,11 +1862,9 @@
                             <div class="col-lg-6 col-md-6 col-12">
                                 <div class="drop-down-card">
                                     <div class="qanda">
-                                        <p class="question"><span>Q:</span> Are there contracts or agreements with farmers?
+                                        <p class="question"><span>{{ __('messages.q') }}</span> {{ __('messages.q11') }}
                                         </p>
-                                        <p class="answer">A:   We assess local and international market prices and provide
-                                            competitive, transparent rates to help Cambodian farmers earn sustainable
-                                            income.</p>
+                                        <p class="answer">{{ __('messages.a11') }}</p>
                                     </div>
 
                                     <button onclick="toggleDropdown(this)">
@@ -1901,7 +1889,7 @@
     {{-- contact --}}
     <section class="relative z-[50]">
         <form action="{{ route('contact.send') }}" method="POST" class="wrapper-contact container">
-            <p>Contact Form</p>
+            <p>{{ app()->getLocale() === 'en' ? 'Contact Form' : (app()->getLocale() === 'km' ? 'Contact Form' : 'Contact Form') }}</p>
             <div class="row">
                 @csrf
                 <div class="col-lg-6 col-md-6 input-field">
@@ -2141,8 +2129,7 @@
             <div class="confirm-policy">
                 <input type="checkbox" name="policy">
                 <div class="confrim-policy-text">
-                    <p>I consent to having this website store my submitted
-                        information so they can respond to my enquiry.
+                    <p>{{ app()->getLocale() === 'en' ? 'I consent to having this website store my submitted information so they can respond to my enquiry.' : (app()->getLocale() === 'km' ? 'I consent to having this website store my submitted information so they can respond to my enquiry.' : 'I consent to having this website store my submitted information so they can respond to my enquiry.') }}
                     </p>
                 </div>
             </div>
@@ -2151,7 +2138,7 @@
             <div class="d-flex justify-content-center">
                 <button class="btn-Submit">
                     <img src="{{ asset('assets/images/btn-submit-bg.png') }}">
-                    <p>Submit</p>
+                    <p>{{ app()->getLocale() === 'en' ? 'Submit' : (app()->getLocale() === 'km' ? 'Submit' : 'Submit') }}</p>
                 </button>
             </div>
         </form>

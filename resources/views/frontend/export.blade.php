@@ -1066,15 +1066,18 @@
                 </div>
                 <div class="banner-content">
                     <div class="main-banner-h1-bg">
-                        <h1 data-aos="zoom-in-up" data-aos-duration="1000">Export</h1>
-                        <h1 data-aos="zoom-in-up" data-aos-duration="1200">Commodities</h1>
+                        <h1 data-aos="zoom-in-up" data-aos-duration="1000">{{ app()->getLocale() === 'en' ? 'Export' : (app()->getLocale() === 'km' ? 'Export' : 'Export') }}</h1>
+                        <h1 data-aos="zoom-in-up" data-aos-duration="1200">{{ app()->getLocale() === 'en' ? 'Commodities' : (app()->getLocale() === 'km' ? 'Commodities' : 'Commodities') }}</h1>
                     </div>
                     <div class="main-banner-p-bg">
-                        <p data-aos="zoom-in-up" data-aos-duration="1400">Premium Cambodian Agricultural Products – Rice, Coffee, Corn, Cashew Nuts, Mangoes
-                            & Cassava, Exported Worldwide with Quality You Can Trust.</p>
+                        <p data-aos="zoom-in-up" data-aos-duration="1400">{{ app()->getLocale() === 'en' ? 'Premium Cambodian Agricultural Products – Rice, Coffee, Corn, Cashew Nuts, Mangoes
+                            & Cassava, Exported Worldwide with Quality You Can Trust.' : (app()->getLocale() === 'km' ? 'Premium Cambodian Agricultural Products – Rice, Coffee, Corn, Cashew Nuts, Mangoes
+                            & Cassava, Exported Worldwide with Quality You Can Trust.' : 'Premium Cambodian Agricultural Products – Rice, Coffee, Corn, Cashew Nuts, Mangoes
+                            & Cassava, Exported Worldwide with Quality You Can Trust.') }}</p>
                     </div>
-                    <a data-aos="zoom-in-up" data-aos-duration="1600" href="#interest"><button class="btn-Interest-to-export">Interest to
-                            Export</button></a>
+                    <a data-aos="zoom-in-up" data-aos-duration="1600" href="#interest"><button class="btn-Interest-to-export">
+                        {{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'Interest to Export' : 'Interest to Export') }}
+                    </button></a>
                 </div>
             </div>
         </div>
@@ -1096,18 +1099,18 @@
                                 active: 'default',
                                 products: {
                                     default: {
-                                        title: 'Grains & Cereals',
-                                        desc: 'High-quality, farm-sourced grains trusted by local farmers and global buyers.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Grains & Cereals' : (app()->getLocale() === 'km' ? 'Grains & Cereals' : 'Grains & Cereals') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'High-quality, farm-sourced grains trusted by local farmers and global buyers.' : (app()->getLocale() === 'km' ? 'High-quality, farm-sourced grains trusted by local farmers and global buyers.' : 'High-quality, farm-sourced grains trusted by local farmers and global buyers.') }}',
                                         img: '{{ asset('assets/images/export/cereals.jpg') }}'
                                     },
                                     rice: {
-                                        title: 'Rice',
-                                        desc: 'Export-quality fresh mangoes with rich flavor and natural sweetness.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Rice' : (app()->getLocale() === 'km' ? 'Rice' : 'Rice') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Export-quality fresh mangoes with rich flavor and natural sweetness.' : (app()->getLocale() === 'km' ? 'Export-quality fresh mangoes with rich flavor and natural sweetness.' : 'Export-quality fresh mangoes with rich flavor and natural sweetness.') }}',
                                         img: '{{ asset('assets/images/export/rice.jpg') }}'
                                     },
                                     yellow_corn: {
-                                        title: 'Yellow Corn',
-                                        desc: 'Carefully dried mango slices for long shelf life and premium taste.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Yellow Corn' : (app()->getLocale() === 'km' ? 'Yellow Corn' : 'Yellow Corn') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Carefully dried mango slices for long shelf life and premium taste.' : (app()->getLocale() === 'km' ? 'Carefully dried mango slices for long shelf life and premium taste.' : 'Carefully dried mango slices for long shelf life and premium taste.') }}',
                                         img: '{{ asset('assets/images/card-3.png') }}'
                                     }
                                 }
@@ -1126,24 +1129,24 @@
                                     <div class="smaill-detail-card">
                                         <!-- Fresh Mango -->
                                         <button x-show="active === 'default'" @click="active = 'rice'">
-                                            Rice
+                                            {{ app()->getLocale() === 'en' ? 'Rice' : (app()->getLocale() === 'km' ? 'Rice' : 'Rice') }}
                                         </button>
 
                                         <!-- Dried Mango -->
                                         <button x-show="active === 'default'" @click="active = 'yellow_corn'">
-                                            Yellow Corn
+                                            {{ app()->getLocale() === 'en' ? 'Yellow Corn' : (app()->getLocale() === 'km' ? 'Yellow Corn' : 'Yellow Corn') }}
                                         </button>
 
                                         <!-- Back -->
                                         <button x-show="active !== 'default'" @click="active = 'default'" class="btn-back">
-                                            Back
+                                            {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'Back' : 'Back') }}
                                         </button>
                                     </div>
 
                                     <!-- Interest Button -->
                                     <div class="btn-card-interest-to-export">
-                                        <button><a href="#contact" class="text-[#fff] decoration-transparent">Interest to
-                                                Export</a></button>
+                                        <button><a href="#contact" class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'Interest to Export' : 'Interest to Export') }}
+                                            </a></button>
                                     </div>
 
                                     <!-- Card Number -->
@@ -1160,18 +1163,18 @@
                                 active: 'default',
                                 products: {
                                     default: {
-                                        title: 'Fruits Products',
-                                        desc: 'Fresh and processed fruits harvested at peak ripeness for maximum flavor and quality.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Fruits Products' : (app()->getLocale() === 'km' ? 'Fruits Products' : 'Fruits Products') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Fresh and processed fruits harvested at peak ripeness for maximum flavor and quality.' : (app()->getLocale() === 'km' ? 'Fresh and processed fruits harvested at peak ripeness for maximum flavor and quality.' : 'Fresh and processed fruits harvested at peak ripeness for maximum flavor and quality.') }}',
                                         img: '{{ asset('assets/images/export/fruits.jpg') }}'
                                     },
                                     fresh_mango: {
-                                        title: 'Fresh Mango',
-                                        desc: 'Export-quality fresh mangoes with rich flavor and natural sweetness.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Fresh Mango' : (app()->getLocale() === 'km' ? 'Fresh Mango' : 'Fresh Mango') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Export-quality fresh mangoes with rich flavor and natural sweetness.' : (app()->getLocale() === 'km' ? 'Export-quality fresh mangoes with rich flavor and natural sweetness.' : 'Export-quality fresh mangoes with rich flavor and natural sweetness.') }}',
                                         img: '{{ asset('assets/images/export-card-product-2.png') }}'
                                     },
                                     dried_mango: {
-                                        title: 'Dried Mango',
-                                        desc: 'Carefully dried mango slices for long shelf life and premium taste.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Dried Mango' : (app()->getLocale() === 'km' ? 'Dried Mango' : 'Dried Mango') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Carefully dried mango slices for long shelf life and premium taste.' : (app()->getLocale() === 'km' ? 'Carefully dried mango slices for long shelf life and premium taste.' : 'Carefully dried mango slices for long shelf life and premium taste.') }}',
                                         img: '{{ asset('assets/images/export/dry_mango.jpg') }}'
                                     }
                                 }
@@ -1190,24 +1193,23 @@
                                     <div class="smaill-detail-card">
                                         <!-- Fresh Mango -->
                                         <button x-show="active === 'default'" @click="active = 'fresh_mango'">
-                                            Fresh Mango
+                                           {{ app()->getLocale() === 'en' ? 'Fresh Mango' : (app()->getLocale() === 'km' ? 'Fresh Mango' : 'Fresh Mango') }}
                                         </button>
 
                                         <!-- Dried Mango -->
                                         <button x-show="active === 'default'" @click="active = 'dried_mango'">
-                                            Dried Mango
+                                            {{ app()->getLocale() === 'en' ? 'Dried Mango' : (app()->getLocale() === 'km' ? 'Dried Mango' : 'Dried Mango') }}
                                         </button>
 
                                         <!-- Back -->
                                         <button x-show="active !== 'default'" @click="active = 'default'" class="btn-back">
-                                            Back
+                                            {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'Back' : 'Back') }}
                                         </button>
                                     </div>
 
                                     <!-- Interest Button -->
                                     <div class="btn-card-interest-to-export">
-                                        <button><a href="#contact" class="text-[#fff] decoration-transparent">Interest to
-                                                Export</a></button>
+                                        <button><a href="#contact" class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'Interest to Export' : 'Interest to Export') }}</a></button>
                                     </div>
 
                                     <!-- Card Number -->
@@ -1223,18 +1225,18 @@
                                 active: 'default',
                                 products: {
                                     default: {
-                                        title: 'Nuts & Legumes',
-                                        desc: 'Premium-grade nuts and legumes sourced from trusted Cambodian farmers.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Nuts & Legumes' : (app()->getLocale() === 'km' ? 'Nuts & Legumes' : 'Nuts & Legumes') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Rice' : (app()->getLocale() === 'km' ? 'Rice' : 'Rice') }}Premium-grade nuts and legumes sourced from trusted Cambodian farmers.',
                                         img: '{{ asset('assets/images/export-card-product-3.png') }}'
                                     },
                                     cashew: {
-                                        title: 'Cashew Nuts',
-                                        desc: 'High-quality Cambodian cashew nuts suitable for global export markets.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Cashew Nuts' : (app()->getLocale() === 'km' ? 'Cashew Nuts' : 'Cashew Nuts') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'High-quality Cambodian cashew nuts suitable for global export markets.' : (app()->getLocale() === 'km' ? 'High-quality Cambodian cashew nuts suitable for global export markets.' : 'High-quality Cambodian cashew nuts suitable for global export markets.') }}',
                                         img: '{{ asset('assets/images/export/nuts.jpg') }}'
                                     },
                                     peanut: {
-                                        title: 'Peanuts',
-                                        desc: 'Premium peanuts processed for food and industrial use.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Peanuts' : (app()->getLocale() === 'km' ? 'Peanuts' : 'Peanuts') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Premium peanuts processed for food and industrial use.' : (app()->getLocale() === 'km' ? 'Premium peanuts processed for food and industrial use.' : 'Premium peanuts processed for food and industrial use.') }}',
                                         img: '{{ asset('assets/images/export/peanut.jpg') }}'
                                     }
                                 }
@@ -1253,28 +1255,23 @@
                                     <div class="smaill-detail-card">
                                         <!-- Cashew -->
                                         <button x-show="active === 'default'" @click="active = 'cashew'">
-                                            Cashew Nuts
+                                            {{ app()->getLocale() === 'en' ? 'Cashew Nuts' : (app()->getLocale() === 'km' ? 'Cashew Nuts' : 'Cashew Nuts') }}
                                         </button>
 
                                         <!-- Peanut -->
                                         <button x-show="active === 'default'" @click="active = 'peanut'">
-                                            Peanuts
+                                            {{ app()->getLocale() === 'en' ? 'Peanuts' : (app()->getLocale() === 'km' ? 'Peanuts' : 'Peanuts') }}
                                         </button>
 
                                         <!-- Back -->
                                         <button x-show="active !== 'default'" @click="active = 'default'" class="btn-back">
-                                            Back
+                                            {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'Back' : 'Back') }}
                                         </button>
                                     </div>
 
                                     <!-- Interest Button -->
                                     <div class="btn-card-interest-to-export">
-                                        <button><a href="#contact" class="text-[#fff] decoration-transparent">Interest to
-                                                Export</a></button>
-                                    </div>
 
-                                    <!-- Card Number -->
-                                    <div class="card-no">
                                         <p>03</p>
                                     </div>
                                 </div>
@@ -1286,13 +1283,13 @@
                                 active: 'default',
                                 products: {
                                     default: {
-                                        title: 'Root Crops',
-                                        desc: 'Processed and dried cassava ideal for industrial and export applications.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Root Crops' : (app()->getLocale() === 'km' ? 'Root Crops' : 'Root Crops') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Processed and dried cassava ideal for industrial and export applications.' : (app()->getLocale() === 'km' ? 'Processed and dried cassava ideal for industrial and export applications.' : 'Processed and dried cassava ideal for industrial and export applications.') }}',
                                         img: '{{ asset('assets/images/export/root_crops.jpg') }}'
                                     },
                                     cassava: {
-                                        title: 'Dried Cassava',
-                                        desc: 'High-quality dried cassava for industrial processing and international export.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Dried Cassava' : (app()->getLocale() === 'km' ? 'Dried Cassava' : 'Dried Cassava') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'High-quality dried cassava for industrial processing and international export.' : (app()->getLocale() === 'km' ? 'High-quality dried cassava for industrial processing and international export.' : 'High-quality dried cassava for industrial processing and international export.') }}',
                                         img: '{{ asset('assets/images/export-card-product-4.png') }}'
                                     }
                                 }
@@ -1311,20 +1308,19 @@
                                     <div class="smaill-detail-card">
                                         <!-- Dried Cassava -->
                                         <button x-show="active === 'default'" @click="active = 'cassava'">
-                                            Dried Cassava
+                                            {{ app()->getLocale() === 'en' ? 'Dried Cassava' : (app()->getLocale() === 'km' ? 'Dried Cassava' : 'Dried Cassava') }}
                                         </button>
 
                                         <!-- Back -->
                                         <button x-show="active !== 'default'" @click="active = 'default'"
                                             class="btn-back">
-                                            Back
+                                            {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'Back' : 'Back') }}
                                         </button>
                                     </div>
 
                                     <!-- Interest Button -->
                                     <div class="btn-card-interest-to-export">
-                                        <button><a href="#contact" class="text-[#fff] decoration-transparent">Interest to
-                                                Export</a></button>
+                                        <button><a href="#contact" class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'Interest to Export' : 'Interest to Export') }}</a></button>
                                     </div>
 
                                     <!-- Card Number -->
@@ -1342,13 +1338,13 @@
                                 active: 'default',
                                 products: {
                                     default: {
-                                        title: 'Spices',
-                                        desc: 'Aromatic Cambodian pepper known for its global reputation and rich flavor profile.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Spices' : (app()->getLocale() === 'km' ? 'Spices' : 'Spices') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Aromatic Cambodian pepper known for its global reputation and rich flavor profile.' : (app()->getLocale() === 'km' ? 'Aromatic Cambodian pepper known for its global reputation and rich flavor profile.' : 'Aromatic Cambodian pepper known for its global reputation and rich flavor profile.') }}',
                                         img: '{{ asset('assets/images/export/spices.jpg') }}'
                                     },
                                     pepper: {
-                                        title: 'Pepper',
-                                        desc: 'High-quality Cambodian pepper suitable for international export markets.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Pepper' : (app()->getLocale() === 'km' ? 'Pepper' : 'Pepper') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'High-quality Cambodian pepper suitable for international export markets.' : (app()->getLocale() === 'km' ? 'High-quality Cambodian pepper suitable for international export markets.' : 'High-quality Cambodian pepper suitable for international export markets.') }}',
                                         img: '{{ asset('assets/images/export-card-product-5.png') }}'
                                     }
                                 }
@@ -1366,20 +1362,19 @@
                                     <div class="smaill-detail-card">
                                         <!-- Pepper -->
                                         <button x-show="active === 'default'" @click="active = 'pepper'">
-                                            Pepper
+                                            {{ app()->getLocale() === 'en' ? 'Pepper' : (app()->getLocale() === 'km' ? 'Pepper' : 'Pepper') }}
                                         </button>
 
                                         <!-- Back -->
                                         <button x-show="active !== 'default'" @click="active = 'default'"
                                             class="btn-back">
-                                            Back
+                                            {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'Back' : 'Back') }}
                                         </button>
                                     </div>
 
                                     <!-- Interest Button -->
                                     <div class="btn-card-interest-to-export">
-                                        <button><a href="#contact" class="text-[#fff] decoration-transparent">Interest to
-                                                Export</a></button>
+                                        <button><a href="#contact" class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'Interest to Export' : 'Interest to Export') }}</a></button>
                                     </div>
 
                                     <!-- Card Number -->
@@ -1397,13 +1392,13 @@
                                 active: 'default',
                                 products: {
                                     default: {
-                                        title: 'Coffee & Beverages',
-                                        desc: 'Premium Cambodian coffee beans carefully selected and exported with international standards.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Coffee & Beverages' : (app()->getLocale() === 'km' ? 'Coffee & Beverages' : 'Coffee & Beverages') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Premium Cambodian coffee beans carefully selected and exported with international standards.' : (app()->getLocale() === 'km' ? 'Premium Cambodian coffee beans carefully selected and exported with international standards.' : 'Premium Cambodian coffee beans carefully selected and exported with international standards.') }}',
                                         img: '{{ asset('assets/images/export-card-product-6.png') }}'
                                     },
                                     coffee: {
-                                        title: 'Coffee Beans',
-                                        desc: 'High-quality Cambodian coffee beans roasted and prepared for global export markets.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Coffee Beans' : (app()->getLocale() === 'km' ? 'Coffee Beans' : 'Coffee Beans') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'High-quality Cambodian coffee beans roasted and prepared for global export markets.' : (app()->getLocale() === 'km' ? 'High-quality Cambodian coffee beans roasted and prepared for global export markets.' : 'High-quality Cambodian coffee beans roasted and prepared for global export markets.') }}',
                                         img: '{{ asset('assets/images/export/coffee_bean.jpg') }}'
                                     }
                                 }
@@ -1422,18 +1417,17 @@
                                     <div class="smaill-detail-card">
                                         <!-- Coffee Beans -->
                                         <button x-show="active === 'default'" @click="active = 'coffee'">
-                                            Coffee Beans
+                                            {{ app()->getLocale() === 'en' ? 'Coffee Beans' : (app()->getLocale() === 'km' ? 'Coffee Beans' : 'Coffee Beans') }}
                                         </button>
 
                                         <!-- Back -->
                                         <button x-show="active !== 'default'" @click="active = 'default'"
-                                            class="btn-back">
-                                            Back
+                                            class="btn-back">{{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'Back' : 'Back') }}
+
                                         </button>
                                     </div>
                                     <div class="btn-card-interest-to-export">
-                                        <button><a href="#contact" class="text-[#fff] decoration-transparent">Interest to
-                                                Export</a></button>
+                                        <button><a href="#contact" class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'Interest to Export' : 'Interest to Export') }}</a></button>
                                     </div>
 
                                     <!-- Card Number -->
