@@ -984,14 +984,19 @@
     </style>
 
     <section>
-        <div class="main-banner">
-            <img class="banner-img" src="{{ asset('assets/images/banner-img-1.png') }}">
+        <div class="main-banner relative">
+            <video autoplay muted loop playsinline class="absolute banner-img inset-0 z-[-10] object-cover w-full h-full"
+                poster="fallback-image.jpg">
+                <source src="{{ url('assets/videos/bg.mp4') }}" type="video/mp4">
+                <source src="{{ url('assets/videos/bg.webm') }}" type="video/webm">
+            </video>
             <div class="wrapper-banner">
                 <div class="logo-video">
-                    <video autoplay muted loop class="home-banner-logo">
-                        <source src="{{ asset('assets/videos/LOGO.webm') }}">
-                        </source>
+                    <video id="logoVideo" autoplay muted loop playsinline class="home-banner-logo hidden">
+                        <source src="{{ asset('assets/videos/LOGO.webm') }}" type="video/webm">
                     </video>
+
+                    <img id="logoImg" src="{{ asset('assets/images/logo.png') }}" class="home-banner-logo" alt="Logo">
                 </div>
                 <div class="banner-content">
                     <div class="main-banner-h1-bg">

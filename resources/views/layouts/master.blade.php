@@ -126,6 +126,12 @@
     @yield('export-detail')
     @yield('career')
     <script>
+        if (!/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+            logoVideo.classList.remove('hidden')
+            logoImg.classList.add('hidden')
+        }
+    </script>
+    <script>
         const counters = document.querySelectorAll(".counter");
 
         function animateCount(counter) {

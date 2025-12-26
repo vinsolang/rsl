@@ -1284,7 +1284,12 @@
 
     {{-- banner --}}
     <section>
-        <div class="main-banner bg-cover" style="background-image: url('{{ asset('assets/images/banner-img-1.png') }}')">
+        <div class="main-banner bg-cover relative">
+            <video autoplay muted loop playsinline class="absolute inset-0 z-[-10] object-cover w-full h-full"
+                poster="fallback-image.jpg">
+                <source src="{{ url('assets/videos/bg.mp4') }}" type="video/mp4">
+                <source src="{{ url('assets/videos/bg.webm') }}" type="video/webm">
+            </video>
             {{-- <img class="img-banner" src="{{ asset('assets/images/banner-img-1.png') }}"> --}}
             <video id="logoVideo" autoplay muted loop playsinline class="home-banner-logo hidden">
                 <source src="{{ asset('assets/videos/LOGO.webm') }}" type="video/webm">
@@ -2152,12 +2157,7 @@
         </form>
     </section>
 
-    <script>
-        if (!/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
-            logoVideo.classList.remove('hidden')
-            logoImg.classList.add('hidden')
-        }
-    </script>
+
 @endsection
 
 
