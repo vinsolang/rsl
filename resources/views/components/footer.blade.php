@@ -293,16 +293,30 @@
         <img class="footer-bg" src="{{ asset('assets/images/footer-bg.png') }}">
 
         <div class="footer-content">
-            <div class="footer-navigate">
-                <h5>Navigation</h5>
+            <div class="footer-navigate">             
+                <h5>{{ app()->getLocale() === 'en' ? 'Navigation' : (app()->getLocale() === 'km' ? 'Navigation' : 'Navigation') }}</h5>
 
-                <li><a href="{{ route('home') }}">Home</a></li>
-                <li><a href="{{ route('export') }}">Export</a></li>
-                <li><a href="{{ route('import') }}">Import</a></li>
-                <li><a href="{{ route('about') }}">About Us</a></li>
-                <li><a href="{{ route('events') }}">Activities</a></li>
-                <li><a href="{{ route('career') }}">Career</a></li>
-                <li><a href="{{ route('contact') }}">Contact Us</a></li>
+                <li><a href="{{ route('home') }}">
+                        {{ app()->getLocale() === 'en' ? 'Home' : (app()->getLocale() === 'km' ? 'Home' : 'Home') }}
+                    </a></li>
+                <li><a href="{{ route('export') }}">
+                        {{ app()->getLocale() === 'en' ? 'Export' : (app()->getLocale() === 'km' ? 'Export' : 'Export') }}
+                    </a></li>
+                <li><a href="{{ route('import') }}">
+                        {{ app()->getLocale() === 'en' ? 'Import' : (app()->getLocale() === 'km' ? 'Import' : 'Import') }}
+                    </a></li>
+                <li><a href="{{ route('about') }}">
+                        {{ app()->getLocale() === 'en' ? 'About Us' : (app()->getLocale() === 'km' ? 'About Us' : 'About Us') }}
+                    </a></li>
+                <li><a href="{{ route('events') }}">
+                        {{ app()->getLocale() === 'en' ? 'Activities' : (app()->getLocale() === 'km' ? 'Activities' : 'Activities') }}
+                    </a></li>
+                <li><a href="{{ route('career') }}">
+                        {{ app()->getLocale() === 'en' ? 'Career' : (app()->getLocale() === 'km' ? 'Career' : 'Career') }}
+                    </a></li>
+                <li><a href="{{ route('contact') }}">
+                        {{ app()->getLocale() === 'en' ? 'Contact' : (app()->getLocale() === 'km' ? 'Contact' : 'Contact') }}
+                    </a></li>
 
             </div>
             <div class="footer-address">

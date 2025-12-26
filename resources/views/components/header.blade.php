@@ -227,32 +227,46 @@
             <ul class="space-y-2 p-4">
                 <li>
                     <a href="{{ route('home') }}"
-                        class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('home') ? 'bg-[#059848] text-[#fff]' : '' }}">Home</a>
+                        class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('home') ? 'bg-[#059848] text-[#fff]' : '' }}">
+                            {{ app()->getLocale() === 'en' ? 'Home' : (app()->getLocale() === 'km' ? 'Home' : 'Home') }}
+
+                    </a>
                 </li>
                 <li>
                     <a href="{{ route('export') }}"
-                        class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('export') ? 'bg-[#059848] text-[#fff]' : '' }}">Export</a>
+                        class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('export') ? 'bg-[#059848] text-[#fff]' : '' }}">
+                        {{ app()->getLocale() === 'en' ? 'Export' : (app()->getLocale() === 'km' ? 'Export' : 'Export') }}
+                    </a>
                 </li>
                 <li>
                     <a href="{{ route('import') }}"
-                        class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('import') ? 'bg-[#059848] text-[#fff]' : '' }}">Import</a>
+                        class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('import') ? 'bg-[#059848] text-[#fff]' : '' }}">
+                        {{ app()->getLocale() === 'en' ? 'Import' : (app()->getLocale() === 'km' ? 'Import' : 'Import') }}
+                    </a>
                 </li>
                 <li>
                     <a href="{{ route('about') }}"
-                        class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('about') ? 'bg-[#059848] text-[#fff]' : '' }}">About
-                        Us</a>
+                        class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('about') ? 'bg-[#059848] text-[#fff]' : '' }}">
+                        {{ app()->getLocale() === 'en' ? 'About Us' : (app()->getLocale() === 'km' ? 'About Us' : 'About Us') }}                    
+                    </a>
                 </li>
                 <li>
                     <a href="{{ route('events') }}"
-                        class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('events') ? 'bg-[#059848] text-[#fff]' : '' }}">Activities</a>
+                        class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('events') ? 'bg-[#059848] text-[#fff]' : '' }}">
+                        {{ app()->getLocale() === 'en' ? 'Activities' : (app()->getLocale() === 'km' ? 'Activities' : 'Activities') }}                    
+                    </a>
                 </li>
                 <li>
                     <a href="{{ route('career') }}"
-                        class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('career') ? 'bg-[#059848] text-[#fff]' : '' }}">Career</a>
+                        class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('career') ? 'bg-[#059848] text-[#fff]' : '' }}">
+                        {{ app()->getLocale() === 'en' ? 'Career' : (app()->getLocale() === 'km' ? 'Career' : 'Career') }}                    
+                    </a>
                 </li>
                 <li>
                     <a href="{{ route('contact') }}"
-                        class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('contact') ? 'bg-[#059848] text-[#fff]' : '' }}">Contact</a>
+                        class="block p-2 hover:bg-gray-100 rounded text-[#1E1E1E] no-underline {{ Route::is('contact') ? 'bg-[#059848] text-[#fff]' : '' }}">
+                        {{ app()->getLocale() === 'en' ? 'Contact' : (app()->getLocale() === 'km' ? 'Contact' : 'Contact') }}                    
+                    </a>
                 </li>
             </ul>
 
