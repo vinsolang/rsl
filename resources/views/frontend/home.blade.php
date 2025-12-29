@@ -59,6 +59,12 @@
             color: #059848
         }
 
+        .main-banner .home-banner-context .khmer-title {
+            font-size: 60px;
+            font-weight: bolder;
+            color: #059848
+        }
+
         .main-banner .home-banner-context h3 {
             font-size: 40px;
             font-weight: bold;
@@ -422,7 +428,7 @@
             left: 50%;
             transform: translateX(-50%);
             width: 380px;
-            height: auto;
+            height: 300px;
             background-color: #ECECEC;
             border-radius: 20px;
             padding-left: 0.8rem;
@@ -437,9 +443,13 @@
         }
 
         .wrapper-card-content {
+           position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
             display: flex;
             justify-content: space-between;
-            margin-top: 2.5rem;
+            padding: 0 10px;
         }
 
         .wrapper-card-content .btn-explore {
@@ -1300,13 +1310,13 @@
 
             <div class="home-banner-context">
                 {{-- <h5 class="popup">{{ __('messages.home') }}</h5> --}}
-                <h5 class="uppercase" data-aos="zoom-in-up" data-aos-duration="1000">{{ app()->getLocale() === 'en' ? 'Welcome to' : (app()->getLocale() === 'km' ? 'Welcome to' : 'Welcome to') }}</h5>
-                <h1 data-aos="zoom-in-up" data-aos-duration="1200">{{ app()->getLocale() === 'en' ? 'RSL TRADING' : (app()->getLocale() === 'km' ? 'RSL TRADING' : 'RSL TRADING') }}</h1>
-                <h3 data-aos="zoom-in-up" data-aos-duration="1400">{{ app()->getLocale() === 'en' ? 'Health Life Future' : (app()->getLocale() === 'km' ? 'Health Life Future' : 'Health Life Future') }}</h3>
+                <h5 class="uppercase" data-aos="zoom-in-up" data-aos-duration="1000">{{ app()->getLocale() === 'en' ? 'Welcome to' : (app()->getLocale() === 'km' ? 'សូមស្វាគមន៍មកកាន់' : 'Welcome to') }}</h5>
+                <h1 data-aos="zoom-in-up" data-aos-duration="1200" class="{{ app()->getLocale() === 'km' ? 'khmer-title' : 'english-title' }}">{{ app()->getLocale() === 'en' ? 'RSL TRADING' : (app()->getLocale() === 'km' ? 'ក្រុមហ៊ុន អ អេស អិល ត្រេឌីង ឯ.ក' : 'RSL TRADING') }}</h1>
+                <h3 data-aos="zoom-in-up" data-aos-duration="1400">{{ app()->getLocale() === 'en' ? 'Health Life Future' : (app()->getLocale() === 'km' ? 'សុខភាព ជីវិត អនាគត' : 'Health Life Future') }}</h3>
 
                 <button class="btn-explore-our-exports" data-aos="zoom-in-up" data-aos-duration="1600">
                     <img src="{{ asset('assets/images/btn-submit-bg.png') }}">
-                    <p><a href="{{ route('export') }}#rice">{{ app()->getLocale() === 'en' ? 'Explore Our Exports' : (app()->getLocale() === 'km' ? 'Explore Our Exports' : 'Explore Our Exports') }}</a></p>
+                    <p><a href="{{ route('export') }}#rice">{{ app()->getLocale() === 'en' ? 'Explore Our Exports' : (app()->getLocale() === 'km' ? 'ពត៌មានបន្ថែមអំពីការនាំចេញ' : 'Explore Our Exports') }}</a></p>
                 </button>
             </div>
         </div>
@@ -1324,25 +1334,28 @@
         <div
             class="relative z-20 w-full h-full max-w-7xl mx-auto flex flex-col items-center justify-center text-center font-[700] pt-40">
 
-            <h2 class="text-[#8DC640] text-[20px] md:text-[25px] welcome-to-text">{{ app()->getLocale() === 'en' ? 'Welcome to' : (app()->getLocale() === 'km' ? 'Welcome to' : 'Welcome to') }}</h2>
+            <h2 class="text-[#8DC640] text-[20px] md:text-[25px] welcome-to-text">{{ app()->getLocale() === 'en' ? 'Welcome to' : (app()->getLocale() === 'km' ? 'សូមស្វាគមន៍មកកាន់' : 'Welcome to') }}</h2>
 
             <h1 class="text-[30px] md:text-[50px] text-[#059848] leading-tight fw-bolder">
-                {{ app()->getLocale() === 'en' ? 'RSL TRADING' : (app()->getLocale() === 'km' ? 'RSL TRADING' : 'RSL TRADING') }}
+                {{ app()->getLocale() === 'en' ? 'RSL TRADING' : (app()->getLocale() === 'km' ? 'ក្រុមហ៊ុន អ អេស​ អិល ត្រេឌីង ឯ.ក' : 'RSL TRADING') }}
             </h1>
 
-            <p class="text-[14px] md:text-[16px] font-[400] pt-4 md:px-10">
+            <p class="text-[14px] md:text-[16px] font-[400] pt-4 md:px-10 {{ app()->getLocale() === 'km'
+                    ? 'max-w-5xl'
+                    : 'max-w-6xl'
+                }}">
                 {{ app()->getLocale() === 'en' ? 'Founded in 2015, RSL Trading Co., LTD. focuses on Agriculture Products for Local and International Markets,
                 dedicated to connecting local farmers with us to bring agriculture products such as Rice, Coffee, Pepper,
                 Banana, Cashew Nuts, Mango, Dried Mango, Dried Cassava and other several local products to buyers worldwide
-                while supporting them for better opportunities and incomes.' : (app()->getLocale() === 'km' ? 'Founded in 2015, RSL Trading Co., LTD. focuses on Agriculture Products for Local and International Markets,
+                while supporting them for better opportunities and incomes.' 
+                : (app()->getLocale() === 'km' ? ' ក្រុមហ៊ុន អ អេស​ អិល ត្រេឌីង ឯ.ក ត្រូវបានបង្កើតឡើងក្នុងឆ្នាំ ២០១៥ ​ដោយ 
+                ផ្តោតនាំចេញផលិតផលកសិកម្មលក់លើទីផ្សារទីផ្សារក្នុងស្រុក និងទីផ្សារអន្តរជាតិ ផ្សាភ្ជាប់ទំនាក់ទំនងជាមួយកសិករក្នុងស្រុកដើម្បីនាំយកផលិតផលកសិកម្មដូចជា 
+                អង្ករ កាហ្វេ ម្រេច ចេក គ្រាប់ស្វាយចន្ទី ដំណាប់ស្វាយ ដំឡូងមី និងផលិតផលជាច្រើនទៀត ព្រមទាំងផ្ដល់ការគាំទ្រដល់ពួកគាត់សម្រាប់ការ ប្រមូលផល 
+                និងជួយបង្កើតប្រាក់ចំណូលកាន់តែប្រសើរ។' 
+                : 'Founded in 2015, RSL Trading Co., LTD. focuses on Agriculture Products for Local and International Markets,
                 dedicated to connecting local farmers with us to bring agriculture products such as Rice, Coffee, Pepper,
                 Banana, Cashew Nuts, Mango, Dried Mango, Dried Cassava and other several local products to buyers worldwide
-                while supporting them for better opportunities and incomes.' : 'Founded in 2015, RSL Trading Co., LTD. focuses on Agriculture Products for Local and International Markets,
-                dedicated to connecting local farmers with us to bring agriculture products such as Rice, Coffee, Pepper,
-                Banana, Cashew Nuts, Mango, Dried Mango, Dried Cassava and other several local products to buyers worldwide
-                while supporting them for better opportunities and incomes.') }}
-
-                
+                while supporting them for better opportunities and incomes.') }}  
             </p>
 
 
@@ -1359,8 +1372,8 @@
             <img class="we-start-bg" src="{{ asset('assets/images/bg-2.png') }}">
             <div class="we-start-context">
                 <div class="-mt-[6rem] 2xl:-mt-[10rem]" class="context-one">
-                    <h5 class="!text-[20px] md:!text-[30px] !text-[#059848] !text-center">{{ app()->getLocale() === 'en' ? 'Why We Started ?' : (app()->getLocale() === 'km' ? 'Why We Started ?' : 'Why We Started ?') }}</h5>
-                    <p>{{ app()->getLocale() === 'en' ? '“We help local farmers by creating global opportunities for Cambodian agricultural products.”' : (app()->getLocale() === 'km' ? '“We help local farmers by creating global opportunities for Cambodian agricultural products.”' : '“We help local farmers by creating global opportunities for Cambodian agricultural products.”') }}</p>
+                    <h5 class="!text-[20px] md:!text-[30px] !text-[#059848] !text-center">{{ app()->getLocale() === 'en' ? 'Why We Started ?' : (app()->getLocale() === 'km' ? 'មូលហេតុនៃការស្ថាបនា ?' : 'Why We Started ?') }}</h5>
+                    <p>{{ app()->getLocale() === 'en' ? '“We help local farmers by creating global opportunities for Cambodian agricultural products.”' : (app()->getLocale() === 'km' ? '“យើងខ្ញុំជួយកសិករក្នុងស្រុកដោយបង្កើតឱកាសសម្រាប់ការលក់ផលិតផលកសិកម្មផលិតដោយកូនខ្មែរ។”' : '“We help local farmers by creating global opportunities for Cambodian agricultural products.”') }}</p>
                 </div>
             </div>
 
@@ -1376,7 +1389,7 @@
 
     {{-- Commodities --}}
     <section>
-        <h5 class="text-[20px] md:text-[30px] text-[#059848] text-center pt-10">{{ app()->getLocale() === 'en' ? 'Our Main Commodities' : (app()->getLocale() === 'km' ? 'Our Main Commodities' : 'Our Main Commodities') }}</h5>
+        <h5 class="text-[20px] md:text-[30px] text-[#059848] text-center pt-10">{{ app()->getLocale() === 'en' ? 'Our Main Commodities' : (app()->getLocale() === 'km' ? 'ទំនិញនាំចេញសំខាន់ៗរបស់យើងខ្ញុំ' : 'Our Main Commodities') }}</h5>
         <div class="container">
             <div class="row">
 
@@ -1384,11 +1397,10 @@
                     <div class="card">
                         <img src="{{ asset('assets/images/card-1.png') }}">
                         <div class="card-content">
-                            <h4>{{ app()->getLocale() === 'en' ? 'Rice' : (app()->getLocale() === 'km' ? 'Rice' : 'Rice') }}</h4>
-                            <p>{{ app()->getLocale() === 'en' ? 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
-                                tropical fruits to countries worldwide.' : (app()->getLocale() === 'km' ? 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
-                                tropical fruits to countries worldwide.' : 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
-                                tropical fruits to countries worldwide.') }}</p>
+                            <h4>{{ app()->getLocale() === 'en' ? 'Rice' : (app()->getLocale() === 'km' ? 'អង្ករ' : 'Rice') }}</h4>
+                            <p>{{ app()->getLocale() === 'en' ? 'Premium export-quality rice carefully processed to meet international food standards.' 
+                                : (app()->getLocale() === 'km' ? 'អង្ករ​ដែល​មាន​គុណភាព​ខ្ពស់​សម្រាប់​នាំចេញ។' 
+                                : 'Premium export-quality rice carefully processed to meet international food standards.') }}</p>
 
                             <div class="wrapper-card-content">
                                 <a href="{{ route('export') }}#rice"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'Explore More' : 'Explore More') }}</button></a>
@@ -1409,11 +1421,10 @@
                     <div class="card">
                         <img src="{{ asset('assets/images/card-2.png') }}">
                         <div class="card-content">
-                            <h4>{{ app()->getLocale() === 'en' ? 'Coffee' : (app()->getLocale() === 'km' ? 'Coffee' : 'Coffee') }}</h4>
-                            <p>{{ app()->getLocale() === 'en' ? 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
-                                tropical fruits to countries worldwide.' : (app()->getLocale() === 'km' ? 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
-                                tropical fruits to countries worldwide.' : 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
-                                tropical fruits to countries worldwide.') }}</p>
+                            <h4>{{ app()->getLocale() === 'en' ? 'Coffee' : (app()->getLocale() === 'km' ? 'កាហ្វេ' : 'Coffee') }}</h4>
+                            <p>{{ app()->getLocale() === 'en' ? 'High-quality Cambodian coffee beans roasted and prepared for global export markets.' 
+                                : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេកម្ពុជាកម្រិតខ្ពស់ត្រូវបានលីង និងរៀបចំសម្រាប់នាំចេញទៅកាន់ទីផ្សារពិភពលោក។' 
+                                : 'High-quality Cambodian coffee beans roasted and prepared for global export markets.') }}</p>
 
                             <div class="wrapper-card-content">
                                 <a href="{{ route('export') }}#coffee"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'Explore More' : 'Explore More') }}</button></a>
@@ -1434,14 +1445,13 @@
                     <div class="card">
                         <img src="{{ asset('assets/images/card-3.png') }}">
                         <div class="card-content">
-                            <h4>{{ app()->getLocale() === 'en' ? 'Corn' : (app()->getLocale() === 'km' ? 'Corn' : 'Corn') }}</h4>
-                            <p>{{ app()->getLocale() === 'en' ? 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
-                                tropical fruits to countries worldwide.' : (app()->getLocale() === 'km' ? 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
-                                tropical fruits to countries worldwide.' : 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
-                                tropical fruits to countries worldwide.') }}</p>
+                            <h4>{{ app()->getLocale() === 'en' ? 'Corn' : (app()->getLocale() === 'km' ? 'ពោត' : 'Corn') }}</h4>
+                            <p>{{ app()->getLocale() === 'en' ? 'High-grade yellow corn suitable for animal feed, food processing, and industrial use.' 
+                                : (app()->getLocale() === 'km' ? 'ពោតលឿងគុណភាពខ្ពស់ ស័ក្តិសមសម្រាប់ចំណីសត្វ ការកែច្នៃអាហារ។​' 
+                                : 'High-grade yellow corn suitable for animal feed, food processing, and industrial use.') }}</p>
 
                             <div class="wrapper-card-content">
-                                <a href="{{ route('export') }}#rice"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'Explore More' : 'Explore More') }}</button></a>
+                                <a href="{{ route('export') }}#rice"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'ស្វែងយល់បន្ថែម' : (app()->getLocale() === 'km' ? 'Explore More' : 'Explore More') }}</button></a>
                                 <h1>.03</h1>
                             </div>
 
@@ -1460,14 +1470,13 @@
                     <div class="card">
                         <img src="{{ asset('assets/images/card-4.png') }}">
                         <div class="card-content">
-                            <h4>{{ app()->getLocale() === 'en' ? 'Cashew Nuts' : (app()->getLocale() === 'km' ? 'Cashew Nuts' : 'Cashew Nuts') }}</h4>
-                            <p>{{ app()->getLocale() === 'en' ? 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
-                                tropical fruits to countries worldwide.' : (app()->getLocale() === 'km' ? 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
-                                tropical fruits to countries worldwide.' : 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
-                                tropical fruits to countries worldwide.') }}</p>
+                            <h4>{{ app()->getLocale() === 'en' ? 'Cashew Nuts' : (app()->getLocale() === 'km' ? 'គ្រាប់ស្វាយចន្ទី' : 'Cashew Nuts') }}</h4>
+                            <p>{{ app()->getLocale() === 'en' ? 'High-quality Cambodian cashew nuts suitable for global export markets.' 
+                                : (app()->getLocale() === 'km' ? 'គ្រាប់ស្វាយចន្ទីកម្ពុជាប្រកបដោយគុណភាពខ្ពស់ សមស្របសម្រាប់ទីផ្សារនាំចេញពិភពលោក។' 
+                                : 'High-quality Cambodian cashew nuts suitable for global export markets.') }}</p>
 
                             <div class="wrapper-card-content">
-                                <a href="{{ route('export') }}#nuts"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'Explore More' : 'Explore More') }}</button></a>
+                                <a href="{{ route('export') }}#nuts"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : 'Explore More') }}</button></a>
                                 <h1>.04</h1>
                             </div>
 
@@ -1486,14 +1495,13 @@
                     <div class="card">
                         <img src="{{ asset('assets/images/card-5.png') }}">
                         <div class="card-content">
-                            <h4>{{ app()->getLocale() === 'en' ? 'Potato / Cassava' : (app()->getLocale() === 'km' ? 'Potato / Cassava' : 'Potato / Cassava') }}</h4>
-                            <p>{{ app()->getLocale() === 'en' ? 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
-                                tropical fruits to countries worldwide.' : (app()->getLocale() === 'km' ? 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
-                                tropical fruits to countries worldwide.' : 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
-                                tropical fruits to countries worldwide.') }}</p>
+                            <h4>{{ app()->getLocale() === 'en' ? 'Potato / Cassava' : (app()->getLocale() === 'km' ? 'ដំឡូង/ដំឡូងមី' : 'Potato / Cassava') }}</h4>
+                            <p>{{ app()->getLocale() === 'en' ? 'High-quality dried cassava for industrial processing and international export.' 
+                                : (app()->getLocale() === 'km' ? 'ដំឡូងមីស្ងួតប្រកបដោយគុណភាពខ្ពស់សម្រាប់កែច្នៃឧស្សាហកម្ម និងការនាំចេញអន្តរជាតិ។' 
+                                : 'High-quality dried cassava for industrial processing and international export.') }}</p>
 
                             <div class="wrapper-card-content">
-                                <a href="{{ route('export') }}#root_crops"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'Explore More' : 'Explore More') }}</button></a>
+                                <a href="{{ route('export') }}#root_crops"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : 'Explore More') }}</button></a>
                                 <h1>.05</h1>
                             </div>
 
@@ -1512,14 +1520,13 @@
                     <div class="card">
                         <img src="{{ asset('assets/images/card-6.png') }}">
                         <div class="card-content">
-                            <h4>{{ app()->getLocale() === 'en' ? 'Mango' : (app()->getLocale() === 'km' ? 'Mango' : 'Mango') }}</h4>
-                            <p>{{ app()->getLocale() === 'en' ? 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
-                                tropical fruits to countries worldwide.' : (app()->getLocale() === 'km' ? 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
-                                tropical fruits to countries worldwide.' : 'We specialize in exporting agricultural products such as rice, coffee, corn, cashew nuts and
-                                tropical fruits to countries worldwide.') }}</p>
+                            <h4>{{ app()->getLocale() === 'en' ? 'Mango' : (app()->getLocale() === 'km' ? 'ផ្លែស្វាយ' : 'Mango') }}</h4>
+                            <p>{{ app()->getLocale() === 'en' ? 'Export-quality fresh mangoes with rich flavor and natural sweetness.' 
+                                : (app()->getLocale() === 'km' ? 'ស្វាយស្រស់ៗ គុណភាពនាំចេញ ជាមួយនឹងរសជាតិឈ្ងុយឆ្ងាញ់ និងផ្អែមធម្មជាតិ។' 
+                                : 'Export-quality fresh mangoes with rich flavor and natural sweetness.') }}</p>
 
                             <div class="wrapper-card-content">
-                                <a href="{{ route('export') }}#fruits"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'Explore More' : 'Explore More') }}</button></a>
+                                <a href="{{ route('export') }}#fruits"><button class="btn-explore">{{ app()->getLocale() === 'en' ? 'Explore More' : (app()->getLocale() === 'km' ? 'ស្វែងយល់បន្ថែម' : 'Explore More') }}</button></a>
                                 <h1>.06</h1>
                             </div>
 
@@ -1544,7 +1551,7 @@
 
             <div class="achievement-content">
 
-                <h4>{{ app()->getLocale() === 'en' ? 'Acheivement in Number' : (app()->getLocale() === 'km' ? 'Acheivement in Number' : 'Acheivement in Number') }}</h4>
+                <h4>{{ app()->getLocale() === 'en' ? 'Acheivement in Number' : (app()->getLocale() === 'km' ? 'សមិទ្ធផលជាតួលេខ' : 'Acheivement in Number') }}</h4>
 
                 <div class="container wrapper-achievement-card">
                     <div class="row">
@@ -1557,7 +1564,7 @@
 
                                 <div class="achievement-card-content">
                                     <h1 class="counter plus" data-target="1,000">0</h1>
-                                    <p>{{ app()->getLocale() === 'en' ? 'local farmers supported' : (app()->getLocale() === 'km' ? 'local farmers supported' : 'local farmers supported') }}</p>
+                                    <p>{{ app()->getLocale() === 'en' ? 'local farmers supported' : (app()->getLocale() === 'km' ? 'គាំទ្រកសិករក្នុងស្រុកជាង' : 'local farmers supported') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -1570,7 +1577,7 @@
 
                                 <div class="achievement-card-content">
                                     <h1 class="counter no" data-target="5">0</h1>
-                                    <p>{{ app()->getLocale() === 'en' ? 'Continents Export' : (app()->getLocale() === 'km' ? 'Continents Export' : 'Continents Export') }}</p>
+                                    <p>{{ app()->getLocale() === 'en' ? 'Continents Export' : (app()->getLocale() === 'km' ? 'នាំចេញទៅកាន់ទ្វីបចំនួន' : 'Continents Export') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -1584,7 +1591,7 @@
 
                                 <div class="achievement-card-content">
                                     <h1 class="counter plus" data-target="500">0</h1>
-                                    <p>{{ app()->getLocale() === 'en' ? 'Export Commodities' : (app()->getLocale() === 'km' ? 'Export Commodities' : 'Export Commodities') }}</p>
+                                    <p>{{ app()->getLocale() === 'en' ? 'Export Commodities' : (app()->getLocale() === 'km' ? 'ផលិតផលនាំចេញជាង' : 'Export Commodities') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -1598,7 +1605,7 @@
 
                                 <div class="achievement-card-content">
                                     <h1 class="counter plus" data-target="10">0</h1>
-                                    <p>{{ app()->getLocale() === 'en' ? 'Years in Operation' : (app()->getLocale() === 'km' ? 'Years in Operation' : 'Years in Operation') }}</p>
+                                    <p>{{ app()->getLocale() === 'en' ? 'Years in Operation' : (app()->getLocale() === 'km' ? 'បទពិសោធន៍ប្រតិបត្តិការជាង' : 'Years in Operation') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -1611,7 +1618,7 @@
 
                                 <div class="achievement-card-content">
                                     <h1 class="counter percent" data-target="20">0</h1>
-                                    <p>{{ app()->getLocale() === 'en' ? 'Farmers Sources' : (app()->getLocale() === 'km' ? 'Farmers Sources' : 'Farmers Sources') }}</p>
+                                    <p>{{ app()->getLocale() === 'en' ? 'Farmers Sources' : (app()->getLocale() === 'km' ? 'ប្រមូលទិញពីកសិករ' : 'Farmers Sources') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -1625,7 +1632,7 @@
 
                                 <div class="achievement-card-content">
                                     <h1 class="counter percent" data-target="80">0</h1>
-                                    <p>{{ app()->getLocale() === 'en' ? 'Communities Sources' : (app()->getLocale() === 'km' ? 'Communities Sources' : 'Communities Sources') }}</p>
+                                    <p>{{ app()->getLocale() === 'en' ? 'Communities Sources' : (app()->getLocale() === 'km' ? 'ប្រមូលទិញពីសហគមន៍' : 'Communities Sources') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -1650,8 +1657,8 @@
         <div class="FAQ-background">
             <div class="container">
                 <div class="FAQ-content">
-                    <h1>{{ app()->getLocale() === 'en' ? 'Frequently Asked Questions' : (app()->getLocale() === 'km' ? 'Frequently Asked Questions' : 'Frequently Asked Questions') }}</h1>
-                    <h5>{{ app()->getLocale() === 'en' ? 'For buyers/Importers' : (app()->getLocale() === 'km' ? 'For buyers/Importers' : 'For buyers/Importers') }}</h5>
+                    <h1>{{ app()->getLocale() === 'en' ? 'Frequently Asked Questions' : (app()->getLocale() === 'km' ? 'សំណួរដែលសួរញឹកញាប់' : 'Frequently Asked Questions') }}</h1>
+                    <h5>{{ app()->getLocale() === 'en' ? 'For buyers/Importers' : (app()->getLocale() === 'km' ? 'សម្រាប់អ្នកទិញ/អ្នកនាំចូល' : 'For buyers/Importers') }}</h5>
                 </div>
 
                 <div class="row">
@@ -1777,7 +1784,7 @@
                     </div>
 
                     <div class="FAQ-content">
-                        <h5>{{ app()->getLocale() === 'en' ? 'For Sellers / Local Farmers' : (app()->getLocale() === 'km' ? 'For Sellers / Local Farmers' : 'For Sellers / Local Farmers') }}</h5>
+                        <h5>{{ app()->getLocale() === 'en' ? 'For Sellers / Local Farmers' : (app()->getLocale() === 'km' ? 'សម្រាប់អ្នកលក់ / កសិករក្នុងស្រុក' : 'For Sellers / Local Farmers') }}</h5>
                     </div>
                     <div class="container">
                         <div class="row">
@@ -1888,260 +1895,7 @@
 
     {{-- contact --}}
     <section class="relative z-[50]">
-        <form action="{{ route('contact.send') }}" method="POST" class="wrapper-contact container">
-            <p>{{ app()->getLocale() === 'en' ? 'Contact Form' : (app()->getLocale() === 'km' ? 'Contact Form' : 'Contact Form') }}</p>
-            <div class="row">
-                @csrf
-                <div class="col-lg-6 col-md-6 input-field">
-                    <input class="col-12" name="name" placeholder="Name">
-                </div>
-
-                <div class="col-lg-6 col-md-6 input-field">
-                    <input class="col-12" name="phone" placeholder="Mobile Phone ">
-                </div>
-
-                <div class="col-lg-6 col-md-6 input-field">
-                    <input class="col-12" name="company" placeholder="Company Name">
-                </div>
-
-                <div class="col-lg-6 col-md-6 input-field">
-                    <select name="trade_type" id="tradeType" class="form-select">
-                        <option value="">Select Import/Export</option>
-                        <option value="import">Import</option>
-                        <option value="export">Export</option>
-                    </select>
-                </div>
-
-                <div class="col-lg-6 col-md-6 input-field">
-                    <select name="country" class="form-select" aria-label="Default select example">
-                        <option selected disabled>Select a Country</option>
-                        <option value="Afghanistan">Afghanistan</option>
-                        <option value="Albania">Albania</option>
-                        <option value="Algeria">Algeria</option>
-                        <option value="Andorra">Andorra</option>
-                        <option value="Angola">Angola</option>
-                        <option value="Argentina">Argentina</option>
-                        <option value="Armenia">Armenia</option>
-                        <option value="Australia">Australia</option>
-                        <option value="Austria">Austria</option>
-                        <option value="Azerbaijan">Azerbaijan</option>
-                        <option value="Bahamas">Bahamas</option>
-                        <option value="Bahrain">Bahrain</option>
-                        <option value="Bangladesh">Bangladesh</option>
-                        <option value="Barbados">Barbados</option>
-                        <option value="Belarus">Belarus</option>
-                        <option value="Belgium">Belgium</option>
-                        <option value="Belize">Belize</option>
-                        <option value="Benin">Benin</option>
-                        <option value="Bhutan">Bhutan</option>
-                        <option value="Bhutan">Bhutan</option>
-                        <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
-                        <option value="Botswana">Botswana</option>
-                        <option value="Brazil">Brazil</option>
-                        <option value="Brunei">Brunei</option>
-                        <option value="Bulgaria">Bulgaria</option>
-                        <option value="Burkina Faso">Burkina Faso</option>
-                        <option value="Burundi">Burundi</option>
-                        <option value="Cambodia">Cambodia</option>
-                        <option value="Cameroon">Cameroon</option>
-                        <option value="Canada">Canada</option>
-                        <option value="Cape Verde">Cape Verde</option>
-                        <option value="Central African Republic">Central African Republic</option>
-                        <option value="Chad">Chad</option>
-                        <option value="Chile">Chile</option>
-                        <option value="China">China</option>
-                        <option value="Colombia">Colombia</option>
-                        <option value="Comoros">Comoros</option>
-                        <option value="Congo">Congo</option>
-                        <option value="Costa Rica">Costa Rica</option>
-                        <option value="Croatia">Croatia</option>
-                        <option value="Cuba">Cuba</option>
-                        <option value="Cyprus">Cyprus</option>
-                        <option value="Czech Republic">Czech Republic</option>
-                        <option value="Denmark">Denmark</option>
-                        <option value="Djibouti">Djibouti</option>
-                        <option value="Dominica">Dominica</option>
-                        <option value="Dominican Republic">Dominican Republic</option>
-                        <option value="Ecuador">Ecuador</option>
-                        <option value="Egypt">Egypt</option>
-                        <option value="El Salvador">El Salvador</option>
-                        <option value="Equatorial Guinea">Equatorial Guinea</option>
-                        <option value="Eritrea">Eritrea</option>
-                        <option value="Estonia">Estonia</option>
-                        <option value="Ethiopia">Ethiopia</option>
-                        <option value="Fiji">Fiji</option>
-                        <option value="Finland">Finland</option>
-                        <option value="France">France</option>
-                        <option value="Gabon">Gabon</option>
-                        <option value="Gambia">Gambia</option>
-                        <option value="Georgia">Georgia</option>
-                        <option value="Germany">Germany</option>
-                        <option value="Ghana">Ghana</option>
-                        <option value="Greece">Greece</option>
-                        <option value="Grenada">Grenada</option>
-                        <option value="Guatemala">Guatemala</option>
-                        <option value="Guinea">Guinea</option>
-                        <option value="Guinea-Bissau">Guinea-Bissau</option>
-                        <option value="Guyana">Guyana</option>
-                        <option value="Haiti">Haiti</option>
-                        <option value="Honduras">Honduras</option>
-                        <option value="Hungary">Hungary</option>
-                        <option value="Iceland">Iceland</option>
-                        <option value="India">India</option>
-                        <option value="Indonesia">Indonesia</option>
-                        <option value="Iran">Iran</option>
-                        <option value="Iraq">Iraq</option>
-                        <option value="Ireland">Ireland</option>
-                        <option value="Israel">Israel</option>
-                        <option value="Italy">Italy</option>
-                        <option value="Jamaica">Jamaica</option>
-                        <option value="Japan">Japan</option>
-                        <option value="Jordan">Jordan</option>
-                        <option value="Kazakhstan">Kazakhstan</option>
-                        <option value="Kenya">Kenya</option>
-                        <option value="Kiribati">Kiribati</option>
-                        <option value="North Korea">North Korea</option>
-                        <option value="South Korea">South Korea</option>
-                        <option value="Kuwait">Kuwait</option>
-                        <option value="Kyrgyzstan">Kyrgyzstan</option>
-                        <option value="Laos">Laos</option>
-                        <option value="Latvia">Latvia</option>
-                        <option value="Lebanon">Lebanon</option>
-                        <option value="Lesotho">Lesotho</option>
-                        <option value="Liberia">Liberia</option>
-                        <option value="Libya">Libya</option>
-                        <option value="Liechtenstein">Liechtenstein</option>
-                        <option value="Lithuania">Lithuania</option>
-                        <option value="Luxembourg">Luxembourg</option>
-                        <option value="Madagascar">Madagascar</option>
-                        <option value="Malawi">Malawi</option>
-                        <option value="Malaysia">Malaysia</option>
-                        <option value="Maldives">Maldives</option>
-                        <option value="Mali">Mali</option>
-                        <option value="Malta">Malta</option>
-                        <option value="Marshall Islands">Marshall Islands</option>
-                        <option value="Mauritania">Mauritania</option>
-                        <option value="Mauritius">Mauritius</option>
-                        <option value="Mexico">Mexico</option>
-                        <option value="Micronesia">Micronesia</option>
-                        <option value="Moldova">Moldova</option>
-                        <option value="Monaco">Monaco</option>
-                        <option value="Mongolia">Mongolia</option>
-                        <option value="Montenegro">Montenegro</option>
-                        <option value="Morocco">Morocco</option>
-                        <option value="Mozambique">Mozambique</option>
-                        <option value="Myanmar">Myanmar</option>
-                        <option value="Namibia">Namibia</option>
-                        <option value="Nauru">Nauru</option>
-                        <option value="Nepal">Nepal</option>
-                        <option value="Netherlands">Netherlands</option>
-                        <option value="New Zealand">New Zealand</option>
-                        <option value="Nicaragua">Nicaragua</option>
-                        <option value="Niger">Niger</option>
-                        <option value="Nigeria">Nigeria</option>
-                        <option value="Norway">Norway</option>
-                        <option value="Oman">Oman</option>
-                        <option value="Pakistan">Pakistan</option>
-                        <option value="Palau">Palau</option>
-                        <option value="Panama">Panama</option>
-                        <option value="Papua New Guinea">Papua New Guinea</option>
-                        <option value="Paraguay">Paraguay</option>
-                        <option value="Peru">Peru</option>
-                        <option value="Philippines">Philippines</option>
-                        <option value="Poland">Poland</option>
-                        <option value="Portugal">Portugal</option>
-                        <option value="Qatar">Qatar</option>
-                        <option value="Romania">Romania</option>
-                        <option value="Russia">Russia</option>
-                        <option value="Rwanda">Rwanda</option>
-                        <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
-                        <option value="Saint Lucia">Saint Lucia</option>
-                        <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
-                        <option value="Samoa">Samoa</option>
-                        <option value="San Marino">San Marino</option>
-                        <option value="Sao Tome and Principe">Sao Tome and Principe</option>
-                        <option value="Saudi Arabia">Saudi Arabia</option>
-                        <option value="Senegal">Senegal</option>
-                        <option value="Serbia">Serbia</option>
-                        <option value="Seychelles">Seychelles</option>
-                        <option value="Sierra Leone">Sierra Leone</option>
-                        <option value="Singapore">Singapore</option>
-                        <option value="Slovakia">Slovakia</option>
-                        <option value="Slovenia">Slovenia</option>
-                        <option value="Solomon Islands">Solomon Islands</option>
-                        <option value="Somalia">Somalia</option>
-                        <option value="South Africa">South Africa</option>
-                        <option value="Spain">Spain</option>
-                        <option value="Sri Lanka">Sri Lanka</option>
-                        <option value="Sudan">Sudan</option>
-                        <option value="Suriname">Suriname</option>
-                        <option value="Swaziland">Swaziland</option>
-                        <option value="Sweden">Sweden</option>
-                        <option value="Switzerland">Switzerland</option>
-                        <option value="Syria">Syria</option>
-                        <option value="Taiwan">Taiwan</option>
-                        <option value="Tajikistan">Tajikistan</option>
-                        <option value="Tanzania">Tanzania</option>
-                        <option value="Thailand">Thailand</option>
-                        <option value="Togo">Togo</option>
-                        <option value="Tonga">Tonga</option>
-                        <option value="Trinidad and Tobago">Trinidad and Tobago</option>
-                        <option value="Tunisia">Tunisia</option>
-                        <option value="Turkey">Turkey</option>
-                        <option value="Turkmenistan">Turkmenistan</option>
-                        <option value="Tuvalu">Tuvalu</option>
-                        <option value="Uganda">Uganda</option>
-                        <option value="Ukraine">Ukraine</option>
-                        <option value="United Arab Emirates">United Arab Emirates</option>
-                        <option value="United Kingdom">United Kingdom</option>
-                        <option value="USA">USA</option>
-                        <option value="Uruguay">Uruguay</option>
-                        <option value="Uzbekistan">Uzbekistan</option>
-                        <option value="Vanuatu">Vanuatu</option>
-                        <option value="Venezuela">Venezuela</option>
-                        <option value="Vietnam">Vietnam</option>
-                        <option value="Yemen">Yemen</option>
-                        <option value="Zambia">Zambia</option>
-                        <option value="Zimbabwe">Zimbabwe</option>
-                    </select>
-
-                </div>
-
-
-                <div class="col-lg-6 col-md-6">
-                    <label class="choose-field">Commodities</label>
-                    <div id="commodityList" class="showcommoditylist"></div>
-                </div>
-
-                <div class="col-lg-6 col-md-6 input-field">
-                    <input class="col-12" name="address" placeholder="Address">
-                </div>
-
-                <div class="col-lg-6 col-md-6 input-field">
-                    <input class="col-12" name="email" placeholder="Email">
-                </div>
-
-                <div class="col-12 input-field">
-                    <textarea class="col-12" name="message" placeholder="Messages"></textarea>
-                </div>
-            </div>
-
-            <div class="confirm-policy">
-                <input type="checkbox" name="policy">
-                <div class="confrim-policy-text">
-                    <p>{{ app()->getLocale() === 'en' ? 'I consent to having this website store my submitted information so they can respond to my enquiry.' : (app()->getLocale() === 'km' ? 'I consent to having this website store my submitted information so they can respond to my enquiry.' : 'I consent to having this website store my submitted information so they can respond to my enquiry.') }}
-                    </p>
-                </div>
-            </div>
-
-
-            <div class="d-flex justify-content-center">
-                <button class="btn-Submit">
-                    <img src="{{ asset('assets/images/btn-submit-bg.png') }}">
-                    <p>{{ app()->getLocale() === 'en' ? 'Submit' : (app()->getLocale() === 'km' ? 'Submit' : 'Submit') }}</p>
-                </button>
-            </div>
-        </form>
+        @include('frontend.include.contact-form')
     </section>
 
 

@@ -291,7 +291,7 @@
         }
 
         .card-product .card-product-detail .btn-card-interest-to-export button {
-            width: 140.27px;
+            width: 165px;
             height: 42.66px;
             background: linear-gradient(to right, #8DC640, #059848);
             border-radius: 41.5px;
@@ -963,15 +963,21 @@
                 </div>
                 <div class="banner-content">
                     <div class="main-banner-h1-bg">
-                        <h1 data-aos="zoom-in-up" data-aos-duration="1000">Import</h1>
-                        <h1 data-aos="zoom-in-up" data-aos-duration="1200">Commodities</h1>
+                        <h1 data-aos="zoom-in-up" data-aos-duration="1000">{{ app()->getLocale() === 'en' ? 'Import' : (app()->getLocale() === 'km' ? 'ការនាំចូលទំនិញ' : 'Import') }}</h1>
+                        <h1 data-aos="zoom-in-up" data-aos-duration="1200">{{ app()->getLocale() === 'en' ? 'Commodities' : (app()->getLocale() === 'km' ? '' : 'Commodities') }}</h1>
                     </div>
                     <div class="main-banner-p-bg">
-                        <p data-aos="zoom-in-up" data-aos-duration="1400">Premium Cambodian Agricultural Products – Rice, Coffee, Corn, Cashew Nuts, Mangoes
-                            & Cassava, Exported Worldwide with Quality You Can Trust.</p>
+                        <p data-aos="zoom-in-up" data-aos-duration="1400">
+                            {{ app()->getLocale() === 'en' ? 'Premium Cambodian Agricultural Products – Rice, Coffee, Corn, Cashew Nuts, Mangoes & Cassava, Exported Worldwide with Quality You Can Trust.' 
+                            : (app()->getLocale() === 'km' ? 'ផលិតផលកសិកម្មកម្ពុជារួមមាន អង្ករ កាហ្វេ ពោត គ្រាប់ស្វាយចន្ទី ស្វាយ ដំណាប់ស្វាយ និងដំឡូងមី ត្រូវបាននាំចេញទៅកាន់ទីផ្សារពិភពលោកជាមួយនឹងគុណភាពដែលលោកអ្នកអាចទុកចិត្តបាន។' 
+                            : 'Premium Cambodian Agricultural Products – Rice, Coffee, Corn, Cashew Nuts, Mangoes & Cassava, Exported Worldwide with Quality You Can Trust.') }}
+                        </p>
                     </div>
-                    <a data-aos="zoom-in-up" data-aos-duration="1600" href="#first-card"><button class="btn-Interest-to-export">Interest to
-                            Import</button></a>
+                    <a data-aos="zoom-in-up" data-aos-duration="1600" href="#first-card">
+                        <button class="btn-Interest-to-export">
+                            {{ app()->getLocale() === 'en' ? 'Interest to Import' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចូល' : 'Interest to Import') }}
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -992,18 +998,18 @@
                                 active: 'default',
                                 products: {
                                     default: {
-                                        title: 'Premium Rice Varieties',
-                                        desc: 'High-quality imported aromatic and medium-grain rice varieties trusted by international buyers.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Premium Rice Varieties' : (app()->getLocale() === 'km' ? 'ពូជអង្ករលំដាប់ខ្ពស់' : 'Premium Rice Varieties') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'High-quality imported aromatic and medium-grain rice varieties trusted by international buyers.' : (app()->getLocale() === 'km' ? 'ពូជអង្ករក្រអូបនាំចូល និងពូជអង្ករកម្រិតមធ្យមប្រកបដោយគុណភាពខ្ពស់ដែលអតិថិជនអាចទុកចិត្តបាន។' : 'High-quality imported aromatic and medium-grain rice varieties trusted by international buyers.') }}',
                                         img: '{{ asset('assets/images/import/premium _rice.jpg') }}'
                                     },
                                     basmati: {
-                                        title: 'Basmati Rice (India)',
-                                        desc: 'Premium long-grain basmati rice imported from India with rich aroma and superior quality.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Basmati Rice (India)' : (app()->getLocale() === 'km' ? 'អង្ករបាសម៉ាទី (ឥណ្ឌា)' : 'Basmati Rice (India)') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Premium long-grain basmati rice imported from India with rich aroma and superior quality.' : (app()->getLocale() === 'km' ? 'អង្ករបាសម៉ាទីគ្រាប់វែង នាំចូលពីប្រទេសឥណ្ឌា មានក្លិនក្រអូបឈ្ងុយឆ្ងាញ់ និងគុណភាពខ្ពស់។' : 'Premium long-grain basmati rice imported from India with rich aroma and superior quality.') }}',
                                         img: '{{ asset('assets/images/import/rice.jpg') }}'
                                     },
                                     corn: {
-                                        title: 'Yellow Corn',
-                                        desc: 'High-grade yellow corn suitable for food processing and animal feed.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Yellow Corn' : (app()->getLocale() === 'km' ? 'ពោតលឿង' : 'Yellow Corn') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'High-grade yellow corn suitable for food processing and animal feed.' : (app()->getLocale() === 'km' ? 'ពោតលឿងប្រកបដោយគុណភាពខ្ពស់ ស័ក្តិសមសម្រាប់កែច្នៃអាហារ និងចំណីសត្វ។' : 'High-grade yellow corn suitable for food processing and animal feed.') }}',
                                         img: '{{ asset('assets/images/export-card-product-1.png') }}'
                                     }
                                 }
@@ -1022,29 +1028,32 @@
                                     <div class="smaill-detail-card">
                                         <!-- Basmati -->
                                         <button x-show="active === 'default'" @click="active = 'basmati'">
-                                            Basmati Rice (India)
+                                            {{ app()->getLocale() === 'en' ? 'Basmati Rice (India)' : (app()->getLocale() === 'km' ? 'អង្ករបាសម៉ាទី (ឥណ្ឌា)' : 'Basmati Rice (India)') }}
                                         </button>
 
                                         <!-- Yellow Corn -->
                                         <button x-show="active === 'default'" @click="active = 'corn'">
-                                            Yellow Corn
+                                           {{ app()->getLocale() === 'en' ? 'Yellow Corn' : (app()->getLocale() === 'km' ? 'ពោតលឿង' : 'Yellow Corn') }}
                                         </button>
 
                                         <!-- Back -->
                                         <button x-show="active !== 'default'" @click="active = 'default'" class="btn-back">
-                                            Back
+                                            {{ app()->getLocale() === 'en' ? 'Back' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ' : 'Back') }}
                                         </button>
                                     </div>
 
                                     <!-- Interest Button -->
                                     <div class="btn-card-interest-to-export">
-                                        <button><a href="#contact" class="text-[#fff] decoration-transparent">Interest to
-                                                Import</a></button>
+                                        <button>
+                                            <a href="#contact" class="text-[#fff] decoration-transparent">
+                                                {{ app()->getLocale() === 'en' ? 'Interest to Import' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចូល' : 'Interest to Import') }}
+                                            </a>
+                                        </button>
                                     </div>
 
                                     <!-- Card Number -->
                                     <div class="card-no">
-                                        <p>01</p>
+                                        <p>{{ app()->getLocale() === 'en' ? '01' : (app()->getLocale() === 'km' ? '០១' : '01') }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -1056,28 +1065,28 @@
                                 active: 'default',
                                 products: {
                                     default: {
-                                        title: 'Whole Spices',
-                                        desc: 'Sourced from reputable growers to ensure purity, aroma, and strong market demand.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Whole Spices' : (app()->getLocale() === 'km' ? 'គ្រឿងទេសទាំងមូល' : 'Whole Spices') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Sourced from reputable growers to ensure purity, aroma, and strong market demand.' : (app()->getLocale() === 'km' ? 'ទទួលទិញពីប្រភពដែលមានកេរ្តិ៍ឈ្មោះល្អ ដើម្បីធានាបាននូវគុណភាព ក្លិនឈ្ងុយ និងមានតម្រូវការទីផ្សារខ្លាំង។' : 'Sourced from reputable growers to ensure purity, aroma, and strong market demand.') }}',
                                         img: '{{ asset('assets/images/export/spices.jpg') }}'
                                     },
                                     cumin: {
-                                        title: 'Cumin Seeds',
-                                        desc: 'High-quality whole cumin seeds with strong aroma for global spice markets.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Cumin Seeds' : (app()->getLocale() === 'km' ? 'គ្រាប់ជីអង្កាម' : 'Cumin Seeds') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'High-quality whole cumin seeds with strong aroma for global spice markets.' : (app()->getLocale() === 'km' ? 'គ្រាប់​ជីអង្កាម​ជាមួយ​នឹង​ក្លិន​ឈ្ងុយ​ខ្លាំង​សម្រាប់​ទីផ្សារ​គ្រឿងទេស​ពិភពលោក។' : 'High-quality whole cumin seeds with strong aroma for global spice markets.') }}',
                                         img: '{{ asset('assets/images/import/cumin_seed.jpg') }}'
                                     },
                                     turmeric: {
-                                        title: 'Turmeric (Whole)',
-                                        desc: 'Whole turmeric roots known for vibrant color and medicinal properties.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Turmeric (Whole)' : (app()->getLocale() === 'km' ? 'រមៀត' : 'Turmeric (Whole)') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Whole turmeric roots known for vibrant color and medicinal properties.' : (app()->getLocale() === 'km' ? '​រមៀត​មានចម្រុះពណ៌ និង​មាន​លក្ខណៈសម្បត្តិ​ជាឱសថ។' : 'Whole turmeric roots known for vibrant color and medicinal properties.') }}',
                                         img: '{{ asset('assets/images/import/turmeric-1.jpg') }}'
                                     },
                                     red_pepper: {
-                                        title: 'Red Peppers (Whole)',
-                                        desc: 'Whole dried red peppers with bold heat and rich color.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Red Peppers (Whole)' : (app()->getLocale() === 'km' ? 'ម្ទេសក្រហម ' : 'Red Peppers (Whole)') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Whole dried red peppers with bold heat and rich color.' : (app()->getLocale() === 'km' ? 'ម្ទេសក្រហមមានរសជាតិហឹរខ្លាំង និងមានចម្រុះពណ៌។' : 'Whole dried red peppers with bold heat and rich color.') }}',
                                         img: '{{ asset('assets/images/import/red_peppers.jpg') }}'
                                     },
                                     cardamom: {
-                                        title: 'Cardamom (Green)',
-                                        desc: 'Premium green cardamom pods with intense aroma and flavor.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Cardamom (Green)' : (app()->getLocale() === 'km' ? 'ក្រវាញ ' : 'Cardamom (Green)') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Premium green cardamom pods with intense aroma and flavor.' : (app()->getLocale() === 'km' ? 'ផ្លែក្រវាញបៃតងគុណភាពខ្ពស់ ជាមួយនឹងក្លិនក្រអូប និងរសជាតិដិត។' : 'Premium green cardamom pods with intense aroma and flavor.') }}',
                                         img: '{{ asset('assets/images/import/cardamom.jpg') }}'
                                     }
                                 }
@@ -1095,36 +1104,35 @@
                                     <!-- Buttons -->
                                     <div class="smaill-detail-card">
                                         <button x-show="active === 'default'" @click="active = 'cumin'">
-                                            Cumin Seeds
+                                            {{ app()->getLocale() === 'en' ? 'Cumin Seeds' : (app()->getLocale() === 'km' ? 'គ្រាប់ជីអង្កាម' : 'Cumin Seeds') }}
                                         </button>
 
                                         <button x-show="active === 'default'" @click="active = 'turmeric'">
-                                            Turmeric (Whole)
+                                            {{ app()->getLocale() === 'en' ? 'Turmeric (Whole)' : (app()->getLocale() === 'km' ? 'រមៀត' : 'Turmeric (Whole)') }}
                                         </button>
 
                                         <button x-show="active === 'default'" @click="active = 'red_pepper'">
-                                            Red Peppers (Whole)
+                                            {{ app()->getLocale() === 'en' ? 'Red Peppers (Whole)' : (app()->getLocale() === 'km' ? 'ម្ទេសក្រហម ' : 'Red Peppers (Whole)') }}
                                         </button>
 
                                         <button x-show="active === 'default'" @click="active = 'cardamom'">
-                                            Cardamom (Green)
+                                            {{ app()->getLocale() === 'en' ? 'Cardamom (Green)' : (app()->getLocale() === 'km' ? 'ក្រវាញ ' : 'Cardamom (Green)') }}
                                         </button>
 
                                         <!-- Back -->
                                         <button x-show="active !== 'default'" @click="active = 'default'" class="btn-back">
-                                            Back
+                                            {{ app()->getLocale() === 'en' ? 'Bank' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ ' : 'Back') }}
                                         </button>
                                     </div>
 
                                     <!-- Interest Button -->
                                     <div class="btn-card-interest-to-export">
-                                        <button><a href="#contact" class="text-[#fff] decoration-transparent">Interest to
-                                                Import</a></button>
+                                        <button><a href="#contact" class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Import' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចូល' : 'Interest to Import') }}</a></button>
                                     </div>
 
                                     <!-- Card Number -->
                                     <div class="card-no">
-                                        <p>02</p>
+                                        <p>{{ app()->getLocale() === 'en' ? '02' : (app()->getLocale() === 'km' ? '០២' : '02') }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -1136,18 +1144,18 @@
                                 active: 'default',
                                 products: {
                                     default: {
-                                        title: 'Spice Powders',
-                                        desc: 'Finely milled premium spice powders ready for wholesale and reprocessing.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Spice Powders' : (app()->getLocale() === 'km' ? 'ម្សៅគ្រឿងទេស ' : 'Spice Powders') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Finely milled premium spice powders ready for wholesale and reprocessing.' : (app()->getLocale() === 'km' ? 'ម្សៅគ្រឿងទេសគុណភាពខ្ពស់កិនល្អិតៗរួចរាល់សម្រាប់លក់ដុំ និងកែច្នៃឡើងវិញ។ ' : 'Finely milled premium spice powders ready for wholesale and reprocessing.') }}',
                                         img: '{{ asset('assets/images/import/spices_powder.jpg') }}'
                                     },
                                     turmeric_powder: {
-                                        title: 'Turmeric Powder',
-                                        desc: 'Premium turmeric powder with vibrant color and strong aroma for food processing.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Turmeric Powder' : (app()->getLocale() === 'km' ? 'ម្សៅរមៀត ' : 'Turmeric Powder') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Premium turmeric powder with vibrant color and strong aroma for food processing.' : (app()->getLocale() === 'km' ? 'ម្សៅរមៀតគុណភាពខ្ពស់ជាមួយនឹងចម្រុះពណ៌ និងក្លិនក្រអូបដិត សម្រាប់កែច្នៃអាហារ។ ' : 'Premium turmeric powder with vibrant color and strong aroma for food processing.') }}',
                                         img: '{{ asset('assets/images/import/turmeric.jpg') }}'
                                     },
                                     red_pepper_powder: {
-                                        title: 'Red Pepper Powder',
-                                        desc: 'High-quality red pepper powder with rich color and balanced heat.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Red Pepper Powder' : (app()->getLocale() === 'km' ? 'ម្សៅម្រេចក្រហម ' : 'Red Pepper Powder') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'High-quality red pepper powder with rich color and balanced heat.' : (app()->getLocale() === 'km' ? 'ម្សៅម្រេចក្រហមដែលមានគុណភាពខ្ពស់ ជាមួយនឹងពណ៌សម្បូរបែប។ ' : 'High-quality red pepper powder with rich color and balanced heat.') }}',
                                         img: '{{ asset('assets/images/import/red_peppers_powder.jpg') }}'
                                     }
                                 }
@@ -1166,29 +1174,32 @@
                                     <div class="smaill-detail-card">
                                         <!-- Turmeric Powder -->
                                         <button x-show="active === 'default'" @click="active = 'turmeric_powder'">
-                                            Turmeric Powder
+                                            {{ app()->getLocale() === 'en' ? 'Turmeric Powder' : (app()->getLocale() === 'km' ? 'ម្សៅរមៀត ' : 'Turmeric Powder') }}
                                         </button>
 
                                         <!-- Red Pepper Powder -->
                                         <button x-show="active === 'default'" @click="active = 'red_pepper_powder'">
-                                            Red Pepper Powder
+                                            {{ app()->getLocale() === 'en' ? 'Red Pepper Powder' : (app()->getLocale() === 'km' ? 'ម្សៅម្រេចក្រហម ' : 'Red Pepper Powder') }}
                                         </button>
 
                                         <!-- Back -->
                                         <button x-show="active !== 'default'" @click="active = 'default'" class="btn-back">
-                                            Back
+                                            {{ app()->getLocale() === 'en' ? 'Bank' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ ' : 'Back') }}
                                         </button>
                                     </div>
 
                                     <!-- Interest Button -->
                                     <div class="btn-card-interest-to-export">
-                                        <button><a href="#contact" class="text-[#fff] decoration-transparent">Interest to
-                                                Import</a></button>
+                                        <button>
+                                            <a href="#contact" class="text-[#fff] decoration-transparent">
+                                                {{ app()->getLocale() === 'en' ? 'Interest to Import' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចូល' : 'Interest to Import') }}
+                                            </a>
+                                        </button>
                                     </div>
 
                                     <!-- Card Number -->
                                     <div class="card-no">
-                                        <p>03</p>
+                                        <p>{{ app()->getLocale() === 'en' ? '03' : (app()->getLocale() === 'km' ? '០៣' : '03') }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -1200,13 +1211,13 @@
                                 active: 'default',
                                 products: {
                                     default: {
-                                        title: 'Dehydrated Vegetables',
-                                        desc: 'Long-shelf-life dehydrated garlic and onion products ideal for food production and distribution.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Dehydrated Vegetables' : (app()->getLocale() === 'km' ? 'បន្លែសម្ងួត' : 'Dehydrated Vegetables') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Long-shelf-life dehydrated garlic and onion products ideal for food production and distribution.' : (app()->getLocale() === 'km' ? 'ផលិតផលខ្ទឹមស ដែលមានកាលបរិច្ឆេទប្រើប្រាស់បានយូរ ស័ក្តិសមសម្រាប់ការផលិត និងចែកចាយអាហារ។' : 'Long-shelf-life dehydrated garlic and onion products ideal for food production and distribution.') }}',
                                         img: '{{ asset('assets/images/import/dehydrated_vegetables.jpg') }}'
                                     },
                                     garlic: {
-                                        title: 'Dried Garlic',
-                                        desc: 'Premium dehydrated garlic with strong aroma and extended shelf life for global food markets.',
+                                        title: '{{ app()->getLocale() === 'en' ? 'Dried Garlic' : (app()->getLocale() === 'km' ? 'ខ្ទឹមសស្ងួត' : 'Dried Garlic') }}',
+                                        desc: '{{ app()->getLocale() === 'en' ? 'Premium dehydrated garlic with strong aroma and extended shelf life for global food markets.' : (app()->getLocale() === 'km' ? 'ខ្ទឹមសស្ងួតគុណភាពខ្ពស់ ជាមួយនឹងក្លិនក្រអូបខ្លាំង និងកាលបរិច្ឆេទរក្សាទុកបានយូរសម្រាប់ទីផ្សារម្ហូបអាហារពិភពលោក។' : 'Premium dehydrated garlic with strong aroma and extended shelf life for global food markets.') }}',
                                         img: '{{ asset('assets/images/import/garlic.jpg') }}'
                                     }
                                 }
@@ -1225,25 +1236,24 @@
                                     <div class="smaill-detail-card">
                                         <!-- Dried Garlic -->
                                         <button x-show="active === 'default'" @click="active = 'garlic'">
-                                            Dried Garlic
+                                            {{ app()->getLocale() === 'en' ? 'Dried Garlic' : (app()->getLocale() === 'km' ? 'ខ្ទឹមសស្ងួត' : 'Dried Garlic') }}
                                         </button>
 
                                         <!-- Back -->
                                         <button x-show="active !== 'default'" @click="active = 'default'"
                                             class="btn-back">
-                                            Back
+                                            {{ app()->getLocale() === 'en' ? 'Bank' : (app()->getLocale() === 'km' ? 'ត្រឡប់ក្រោយ ' : 'Back') }}
                                         </button>
                                     </div>
 
                                     <!-- Interest Button -->
                                     <div class="btn-card-interest-to-export">
-                                        <button><a href="#contact" class="text-[#fff] decoration-transparent">Interest to
-                                                Import</a></button>
+                                        <button><a href="#contact" class="text-[#fff] decoration-transparent">{{ app()->getLocale() === 'en' ? 'Interest to Import' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចូល' : 'Interest to Import') }}</a></button>
                                     </div>
 
                                     <!-- Card Number -->
                                     <div class="card-no">
-                                        <p>04</p>
+                                        <p>{{ app()->getLocale() === 'en' ? '04' : (app()->getLocale() === 'km' ? '០៤' : '04') }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -1258,7 +1268,7 @@
 
     <section>
 
-        <div class="partner-main">
+        {{-- <div class="partner-main">
             <img class="partner-bg" src="{{ asset('assets/images/bg-3.png') }}">
             <h1>Why Partner with RSL Trading?</h1>
 
@@ -1416,11 +1426,12 @@
                 </div>
             </div>
 
-        </div>
+        </div> --}}
+        @include('frontend.include.partner')
     </section>
 
     <section id="contact" class="pt-6 md:pt-0 relative z-[50]">
-        <form action="{{ route('contact.send') }}" method="POST" class="wrapper-contact container">
+        {{-- <form action="{{ route('contact.send') }}" method="POST" class="wrapper-contact container">
             <p>Contact Form</p>
             <div class="row">
                 @csrf
@@ -1674,7 +1685,8 @@
                     <p>Submit</p>
                 </button>
             </div>
-        </form>
+        </form> --}}
+        @include('frontend.include.contact-form')
     </section>
 
     <section>

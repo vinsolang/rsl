@@ -999,13 +999,12 @@
                 </div>
                 <div class="banner-content">
                     <div class="main-banner-h1-bg">
-                        <h1 data-aos="zoom-in-up" data-aos-duration="1000">About Us</h1>
+                        <h1 data-aos="zoom-in-up" data-aos-duration="1000">{{ app()->getLocale() === 'en' ? 'About Us' : (app()->getLocale() === 'km' ? 'អំពីយើងខ្ញុំ' : 'About Us') }}</h1>
                     </div>
                     <div class="main-banner-p-bg">
-                        <p data-aos="zoom-in-up" data-aos-duration="1200">​​Your Trusted Partner in Cambodian Agricultural Exports</p>
+                        <p data-aos="zoom-in-up" data-aos-duration="1200">{{ app()->getLocale() === 'en' ? '​​Your Trusted Partner in Cambodian Agricultural Exports' : (app()->getLocale() === 'km' ? 'យើងខ្ញ៉ំជាដៃគូដែលអតិថិជនអាចទុកចិត្តក្នុងការនាំចេញផលិតផលកសិកម្មរបស់កម្ពុជា' : '​​Your Trusted Partner in Cambodian Agricultural Exports') }}</p>
                     </div>
-                    <a data-aos="zoom-in-up" data-aos-duration="1400" href="#first-card"><button class="btn-Interest-to-export">Interest to
-                            Export</button></a>
+                    <a data-aos="zoom-in-up" data-aos-duration="1400" href="#first-card"><button class="btn-Interest-to-export"> {{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : 'Interest to Export') }}</button></a>
                 </div>
             </div>
         </div>
@@ -1018,10 +1017,20 @@
                 <img src="{{ asset('assets/images/bg-1.png') }}">
             </div>
             <div class="first-card-sub-title container">
-                <p style="text-align: left;">Founded in 2015, RSL Trading is a Cambodian leader in agricultural exports,
+                <p style="text-align: left;">
+                     {{ app()->getLocale() === 'en' ? 'Founded in 2015, RSL Trading is a Cambodian leader in agricultural exports,
                     dedicated to connecting local farmers with global markets. Our goal is to bring the finest “Made in
                     Cambodia” products—such as rice, coffee, corn, cashew nuts, mangoes, and cassava—to buyers worldwide
-                    while supporting farmers with better opportunities and incomes.</p>
+                    while supporting farmers with better opportunities and incomes.' 
+                     : (app()->getLocale() === 'km' ? ' ក្រុមហ៊ុន អ អេស​ អិល ត្រេឌីង ឯ.ក ត្រូវបានបង្កើតឡើងក្នុងឆ្នាំ ២០១៥ ​ដោយ 
+                     ផ្តោតនាំចេញផលិតផលកសិកម្មលក់លើទីផ្សារទីផ្សារក្នុងស្រុក និងទីផ្សារអន្តរជាតិ ផ្សាភ្ជាប់ទំនាក់ទំនងជាមួយកសិករក្នុងស្រុកដើម្បីនាំយកផលិតផលកសិកម្មដូចជា 
+                     អង្ករ កាហ្វេ ម្រេច ចេក គ្រាប់ស្វាយចន្ទី ដំណាប់ស្វាយ ដំឡូងមី និងផលិតផលជាច្រើនទៀត 
+                     ព្រមទាំងផ្ដល់ការគាំទ្រដល់ពួកគាត់សម្រាប់ការ ប្រមូលផល និងជួយបង្កើតប្រាក់ចំណូលកាន់តែប្រសើរ។' 
+                     : 'Founded in 2015, RSL Trading is a Cambodian leader in agricultural exports,
+                    dedicated to connecting local farmers with global markets. Our goal is to bring the finest “Made in
+                    Cambodia” products—such as rice, coffee, corn, cashew nuts, mangoes, and cassava—to buyers worldwide
+                    while supporting farmers with better opportunities and incomes.') }}
+                </p>
             </div>
             <div class="main-card-product">
                 <div class="container">
@@ -1031,8 +1040,15 @@
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="card-product">
                                 <div class="first-sub-card">
-                                    <h5 style="color: #8DC640">Our Vision</h5>
-                                    <p>Everyone has Better Health, Longer Life & Greater Future.</p>
+                                    <h5 style="color: #8DC640"> {{ app()->getLocale() === 'en' ? 'Our Vision' : (app()->getLocale() === 'km' ? 'ចក្ខុវិស័យ' : 'Our Vision') }}</h5>
+                                    <p>
+                                        {!! app()->getLocale() === 'en'
+                                            ? 'Everyone has Better Health, Longer Life & Greater Future.'
+                                            : (app()->getLocale() === 'km'
+                                                ? 'គ្រប់គ្នាមានសុខភាពល្អជាងមុន, អាយុវែងជាងមុន និងអនាគត <br/> អស្ចារ្យជាងមុន។'
+                                                : 'Everyone has Better Health, Longer Life & Greater Future.')
+                                        !!}
+                                    </p>
 
                                 </div>
                                 <div style="background-color: #8DC640;" class="second-sub-card ">
@@ -1072,10 +1088,10 @@
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="card-product">
                                 <div class="first-sub-card">
-                                    <h5>Our Mission</h5>
-                                    <p>To Find the BEST Quality Products with Reasonable Price for Customer</p>
-                                    <p>To Bring “Made in Cambodia” to THE WORLD.</p>
-                                    <p>To Help Farmer to get more jobs and better incomes</p>
+                                    <h5> {{ app()->getLocale() === 'en' ? 'Our Mission' : (app()->getLocale() === 'km' ? 'បេសកកម្មរបស់យើងខ្ញុំ' : 'Our Mission') }}</h5>
+                                    <p>{{ app()->getLocale() === 'en' ? 'To Find the BEST Quality Products with Reasonable Price for Customer' : (app()->getLocale() === 'km' ? 'ស្វែងរកផលិតផលគុណភាពល្អបំផុតជាមួយតម្លៃសមរម្យសម្រាប់អតិថិជន។' : 'To Find the BEST Quality Products with Reasonable Price for Customer') }}</p>
+                                    <p>{{ app()->getLocale() === 'en' ? 'To Bring “Made in Cambodia” to THE WORLD.' : (app()->getLocale() === 'km' ? 'នាំផលិតផលកម្ពុជាទៅកាន់ពិភពលោក។' : 'To Bring “Made in Cambodia” to THE WORLD.') }}</p>
+                                    <p>{{ app()->getLocale() === 'en' ? 'To Help Farmer to get more jobs and better incomes' : (app()->getLocale() === 'km' ? 'ខិតខំប្រឹងប្រែងជួយប្រជាកសិករអាចមានលទ្ធភាពទទួលបានការងារច្រើនជាងមុន​និងចំណូលច្រើនជាងមុន។' : 'To Help Farmer to get more jobs and better incomes') }}</p>
                                 </div>
                                 <div class="second-sub-card">
                                     <svg width="55" height="55" viewBox="0 0 55 55" fill="none"
@@ -1156,20 +1172,19 @@
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="card-product">
                                 <div class="first-sub-card">
-                                    <h5 style="color: #059848">Our Core Values</h5>
+                                    <h5 style="color: #059848">{{ app()->getLocale() === 'en' ? 'Our Core Values' : (app()->getLocale() === 'km' ? 'តម្លៃស្នូលរបស់យើងខ្ញុំ' : 'Our Core Values') }}</h5>
                                     <div class="first-sub-card-context">
-                                        <h5 style="font-weight: bold; color: #000000">PEACE</h5>
-                                        <h6 style="font-weight: bold;">P – Passion</h6>
-                                        <p>To Find the BEST Quality Products with Reasonable Price for Customer</p>
-                                        <h6 style="font-weight: bold;">E – Excellence</h6>
-                                        <p>Striving to achieve the best possible results through dedication, skill, and
-                                            continuous improvement.</p>
-                                        <h6 style="font-weight: bold;">A – Accountability</h6>
-                                        <p>Taking full responsibility for your actions, decisions, and outcomes.</p>
-                                        <h6 style="font-weight: bold;">C – Compassion</h6>
-                                        <p>Showing kindness, care, and a willingness to help others in need.</p>
-                                        <h6 style="font-weight: bold;">E – Empathy</h6>
-                                        <p>Understanding and sharing the feelings, needs, and challenges of others.</p>
+                                        <h5 style="font-weight: bold; color: #000000">{{ app()->getLocale() === 'en' ? 'PEACE' : (app()->getLocale() === 'km' ? 'ចំណង់ខ្លាំង' : 'PEACE') }}</h5>
+                                        <h6 style="font-weight: bold;">{{ app()->getLocale() === 'en' ? 'P – Passion' : (app()->getLocale() === 'km' ? 'P –ចំណង់ខ្លាំងលើកិច្ចការអ្វីមួយប្រកបដោយថាមពល និងក្តីស្រលាញ់' : 'P – Passion') }}</h6>
+                                        <p>{{ app()->getLocale() === 'en' ? 'To Find the BEST Quality Products with Reasonable Price for Customer' : (app()->getLocale() === 'km' ? 'ដើម្បីស្វែងរកផលិតផលដែលមានគុណភាពល្អបំផុតជាមួយនឹងតម្លៃសមរម្យសម្រាប់អតិថិជន។' : 'To Find the BEST Quality Products with Reasonable Price for Customer') }}</p>
+                                        <h6 style="font-weight: bold;">{{ app()->getLocale() === 'en' ? 'E – Excellence' : (app()->getLocale() === 'km' ? 'E – ការប្រឹងប្រែងឲ្យអស់លទ្ធភាព' : 'E – Excellence') }}</h6>
+                                        <p>{{ app()->getLocale() === 'en' ? 'Striving to achieve the best possible results through dedication, skill, and continuous improvement.' : (app()->getLocale() === 'km' ? 'ការប្រឹងប្រែងឲ្យអស់លទ្ធភាពដើម្បីទទួលបានលទ្ធផលល្អបំផុត។' : 'Striving to achieve the best possible results through dedication, skill, and continuous improvement.') }}</p>
+                                        <h6 style="font-weight: bold;">{{ app()->getLocale() === 'en' ? 'A – Accountability' : (app()->getLocale() === 'km' ? 'A – ភាពទទួលខុសត្រូវ' : 'A – Accountability') }}</h6>
+                                        <p>{{ app()->getLocale() === 'en' ? 'Taking full responsibility for your actions, decisions, and outcomes.' : (app()->getLocale() === 'km' ? 'ភាពទទួលខុសត្រូវខ្ពស់ចំពោះសកម្មភាព និងលទ្ធផល។' : 'Taking full responsibility for your actions, decisions, and outcomes.') }}</p>
+                                        <h6 style="font-weight: bold;">{{ app()->getLocale() === 'en' ? 'C – Compassion' : (app()->getLocale() === 'km' ? 'C – ការមានចិត្តមេត្តាករុណា' : 'C – Compassion') }}</h6>
+                                        <p>{{ app()->getLocale() === 'en' ? 'Showing kindness, care, and a willingness to help others in need.' : (app()->getLocale() === 'km' ? 'ការមានចិត្តមេត្តាករុណា និងជួយសង្គ្រោះអ្នកដទៃ។' : 'Showing kindness, care, and a willingness to help others in need.') }}</p>
+                                        <h6 style="font-weight: bold;">{{ app()->getLocale() === 'en' ? 'E – Empathy' : (app()->getLocale() === 'km' ? 'E – ការយល់ចិត្ត' : 'E – Empathy') }}</h6>
+                                        <p>{{ app()->getLocale() === 'en' ? 'Understanding and sharing the feelings, needs, and challenges of others.' : (app()->getLocale() === 'km' ? 'ការយល់ចិត្ត យល់អារម្មណ៍ អំពីតម្រូវការ និងទុក្ខធុរៈអ្នកដទៃ។' : 'Understanding and sharing the feelings, needs, and challenges of others.') }}</p>
                                     </div>
                                 </div>
                                 <div style="background-color: #059848;" class="second-sub-card">
@@ -1228,14 +1243,23 @@
     </section>
 
     <section>
-        <div class=" mt-[15rem] text-center flex flex-col gap-2 items-center justify-center max-w-7xl mx-auto px-2">
+        <div class="mt-[25rem] text-center flex flex-col gap-2 items-center justify-center max-w-7xl mx-auto px-2">
             {{-- <img class="second-banner-img" src="{{ asset('assets/images/about-us-second-image.png') }}"> --}}
             <img class="" src="{{ asset('assets/images/profile-card-1.png') }}" class="">
-            <h5 class="text-[20px] md:text-[25px] font-[700] text-[#059848]">Message from Board of Director</h5>
+            <h5 class="text-[20px] md:text-[25px] font-[700] text-[#059848]">{{ app()->getLocale() === 'en' ? 'Message from Board of Director' : (app()->getLocale() === 'km' ? 'សាររបស់ប្រធានក្រុមប្រឹក្សាភិបាល' : 'Message from Board of Director') }}</h5>
             <div class="p-bg">
-                <p>At the heart of our mission is a commitment to global well-being. By providing premium, high-quality
+                <p class="{{ app()->getLocale() === 'km'
+                    ? 'max-w-4xl'
+                    : 'max-w-4xl'
+                }}">
+                    {{ app()->getLocale() === 'en' ? 'At the heart of our mission is a commitment to global well-being. By providing premium, high-quality
                     products, we aim to enhance longevity and health for people everywhere. We are dedicated to serving
-                    and supporting our global community indefinitely, ensuring a thriving future for all humanity.</p>
+                    and supporting our global community indefinitely, ensuring a thriving future for all humanity.' 
+                    : (app()->getLocale() === 'km' ? 'យើងនឹងជ្រើសរើសផលិតផលល្អៗដែលមានគុណភាពខ្ពស់ ធ្វើឱ្យប្រជាជនជុំវិញពិភពលោក មានសុខភាពល្អ អាយុវែង ហើយយើងនឹងតាមបម្រើ តាមការពារ និងតាមថែរក្សាពួកគាត់ជារៀងរហូតតាមរយៈការផ្គត់ផ្គង់ផលិតផលរបស់យើង ដើម្បីអនាគតដ៏អស្ចារ្យសម្រាប់មនុស្សជាតិ៚' 
+                    : 'At the heart of our mission is a commitment to global well-being. By providing premium, high-quality
+                    products, we aim to enhance longevity and health for people everywhere. We are dedicated to serving
+                    and supporting our global community indefinitely, ensuring a thriving future for all humanity.') }}
+                </p>
             </div>
         </div>
     </section>
@@ -1243,42 +1267,39 @@
     <section>
         <div class="meet-our-team-card">
             <div class="container">
-                <h1>Meet Our Team</h1>
+                <h1>{{ app()->getLocale() === 'en' ? 'Meet Our Team' : (app()->getLocale() === 'km' ? 'ស្ថាបនិក និងសហស្ថាបនិក' : 'Meet Our Team') }}</h1>
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center">
                         <div class="card-profile">
                             <img src="{{ asset('assets/images/profile-card-1.png') }}">
-                            <p class="profile-name">Mr. Reach Sothorn</p>
-                            <p class="profile-position">Founder</p>
+                            <p class="profile-name">{{ app()->getLocale() === 'en' ? 'Mr. Reach Sothorn' : (app()->getLocale() === 'km' ? 'លោក រាជ សុធន់' : 'Mr. Reach Sothorn') }}</p>
+                            <p class="profile-position">{{ app()->getLocale() === 'en' ? 'Founder' : (app()->getLocale() === 'km' ? 'ស្ថាបនិក' : 'Founder') }}</p>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-4 col-12">
                         <div class="card-profile">
                             <img src="{{ asset('assets/images/profile-card-2.png') }}">
-                            <p class="profile-name">Mr. Chov Sambath (Mike)</p>
-                            <p class="profile-position">Co-Founder</p>
+                            <p class="profile-name">{{ app()->getLocale() === 'en' ? 'Mr. Chov Sambath (Mike)' : (app()->getLocale() === 'km' ? 'លោក ចូវ សម្បត្តិ (Mike)' : 'Mr. Chov Sambath (Mike)') }}</p>
+                            <p class="profile-position">{{ app()->getLocale() === 'en' ? 'CO-Founder' : (app()->getLocale() === 'km' ? 'សហស្ថាបនិក' : 'CO-Founder') }}</p>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-4 col-12">
                         <div class="card-profile">
                             <img src="{{ asset('assets/images/profile-card-3.png') }}">
-                            <p class="profile-name"> Ms. Chheng Sony</p>
-                            <p class="profile-position">Co-Founder</p>
+                            <p class="profile-name">{{ app()->getLocale() === 'en' ? 'Ms. Chheng Sony' : (app()->getLocale() === 'km' ? 'លោក ឆេង សូនី' : 'Ms. Chheng Sony') }}</p>
+                            <p class="profile-position">{{ app()->getLocale() === 'en' ? 'CO-Founder' : (app()->getLocale() === 'km' ? 'សហស្ថាបនិក' : 'CO-Founder') }}</p>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-4 col-12">
                         <div class="card-profile">
                             <img src="{{ asset('assets/images/profile-card-4.png') }}">
-                            <p class="profile-name">Mr. Srun Phechlang (Jessie)</p>
-                            <p class="profile-position">Co-Founder</p>
+                            <p class="profile-name">{{ app()->getLocale() === 'en' ? 'Mr. Srun Phechlang (Jessie)' : (app()->getLocale() === 'km' ? 'លោក ស្រ៊ុន ពេជ្រឡាង(Jessie)' : 'Mr. Srun Phechlang (Jessie)') }}</p>
+                            <p class="profile-position">{{ app()->getLocale() === 'en' ? 'CO-Founder' : (app()->getLocale() === 'km' ? 'សហស្ថាបនិក' : 'CO-Founder') }}</p>
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
         </div>
@@ -1286,7 +1307,7 @@
 
     <section>
         <div class="credentail-card-title">
-            <h1>Business Credential Licenses</h1>
+            <h1>{{ app()->getLocale() === 'en' ? 'Business Credential Licenses' : (app()->getLocale() === 'km' ? 'ឯកសារចុះបញ្ជិកាសហគ្រាស' : 'Business Credential Licenses') }}</h1>
         </div>
         <div class="business-credentail-card">
             <div class="business-credentail-card-wrapper">
@@ -1306,7 +1327,7 @@
     </section>
 
     <section id="contact">
-        <form action="{{ route('contact.send') }}" method="POST" class="wrapper-contact container">
+        {{-- <form action="{{ route('contact.send') }}" method="POST" class="wrapper-contact container">
             <p>Contact Form</p>
             <div class="row">
                 @csrf
@@ -1560,7 +1581,8 @@
                     <p>Submit</p>
                 </button>
             </div>
-        </form>
+        </form> --}}
+        @include('frontend.include.contact-form')
     </section>
 
     <section>

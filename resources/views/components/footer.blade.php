@@ -297,46 +297,57 @@
                 <h5>{{ app()->getLocale() === 'en' ? 'Navigation' : (app()->getLocale() === 'km' ? 'Navigation' : 'Navigation') }}</h5>
 
                 <li><a href="{{ route('home') }}">
-                        {{ app()->getLocale() === 'en' ? 'Home' : (app()->getLocale() === 'km' ? 'Home' : 'Home') }}
+                        {{ app()->getLocale() === 'en' ? 'Home' : (app()->getLocale() === 'km' ? 'ទំព័រដើម' : 'Home') }}
                     </a></li>
                 <li><a href="{{ route('export') }}">
-                        {{ app()->getLocale() === 'en' ? 'Export' : (app()->getLocale() === 'km' ? 'Export' : 'Export') }}
+                        {{ app()->getLocale() === 'en' ? 'Export' : (app()->getLocale() === 'km' ? 'ទំនិញនាំចេញ' : 'Export') }}
                     </a></li>
                 <li><a href="{{ route('import') }}">
-                        {{ app()->getLocale() === 'en' ? 'Import' : (app()->getLocale() === 'km' ? 'Import' : 'Import') }}
+                        {{ app()->getLocale() === 'en' ? 'Import' : (app()->getLocale() === 'km' ? 'ទំនិញនាំចូល' : 'Import') }}
                     </a></li>
                 <li><a href="{{ route('about') }}">
-                        {{ app()->getLocale() === 'en' ? 'About Us' : (app()->getLocale() === 'km' ? 'About Us' : 'About Us') }}
+                        {{ app()->getLocale() === 'en' ? 'About Us' : (app()->getLocale() === 'km' ? 'អំពីយើងខ្ញុំ' : 'About Us') }}
                     </a></li>
                 <li><a href="{{ route('events') }}">
-                        {{ app()->getLocale() === 'en' ? 'Activities' : (app()->getLocale() === 'km' ? 'Activities' : 'Activities') }}
+                        {{ app()->getLocale() === 'en' ? 'Activities' : (app()->getLocale() === 'km' ? 'សកម្មភាព' : 'Activities') }}
                     </a></li>
                 <li><a href="{{ route('career') }}">
-                        {{ app()->getLocale() === 'en' ? 'Career' : (app()->getLocale() === 'km' ? 'Career' : 'Career') }}
+                        {{ app()->getLocale() === 'en' ? 'Career' : (app()->getLocale() === 'km' ? 'ឱកាសការងារ' : 'Career') }}
                     </a></li>
                 <li><a href="{{ route('contact') }}">
-                        {{ app()->getLocale() === 'en' ? 'Contact' : (app()->getLocale() === 'km' ? 'Contact' : 'Contact') }}
+                        {{ app()->getLocale() === 'en' ? 'Contact' : (app()->getLocale() === 'km' ? 'ការទំនាក់ទំនង' : 'Contact') }}
                     </a></li>
 
             </div>
+            
             <div class="footer-address">
                 {{-- <h5>Full Office Address</h5> --}}
 
-                <li><a style="color: #FFFFFF">{{ app()->getLocale() === 'en' ? '#202, Borey 999 Honey, 2nd Floor, Street 355, Group 03, Village 1 , Boeng
-                        Kak 1 Commune, Toul Kork District, Phnom Penh' : (app()->getLocale() === 'km' ? '#202, Borey 999 Honey, 2nd Floor, Street 355, Group 03, Village 1 , Boeng
+                {{-- <li><a style="color: #FFFFFF">{{ app()->getLocale() === 'en' ? '#202, Borey 999 Honey, {{  2<sup>nd</sup> }} Floor, Street 355, Group 03, Village 1 , Boeng
+                        Kak 1 Commune, Toul Kork District, Phnom Penh' : (app()->getLocale() === 'km' ? '#202, Borey 999 Honey, 2 {{  2<sup>nd</sup> }} Floor, Street 355, Group 03, Village 1 , Boeng
                         Kak 1 Commune, Toul Kork District, Phnom Penh' : '#202, Borey 999 Honey, 2nd Floor, Street 355, Group 03, Village 1 , Boeng
-                        Kak 1 Commune, Toul Kork District, Phnom Penh') }}</a></li>
+                        Kak 1 Commune, Toul Kork District, Phnom Penh') }}</a>
+                </li> --}}
                 <li>
-                    <h5 class="mt-3">info@rsltrading.com</h5>
+                    <a style="color:#FFFFFF">
+                        {!! app()->getLocale() === 'en'
+                            ? '#202, Borey 999 Honey, 2<sup>nd</sup> Floor, Street 355, Group 03, Village 1, Boeng Kak 1 Commune, Toul Kork District, Phnom Penh'
+                            : 'អាសយដ្ឋាន៖ ផ្ទះលេខ ២០២ បុរី ៩៩៩ ហានី ជាន់ទី ២ ផ្លូវលេខ ៣៥៥ ក្រុមទី ០៣ ភូមិ ១ សង្កាត់បឹងកក់ ១ ខណ្ឌទួលគោក រាជធានីភ្នំពេញ'
+                        !!}
+                    </a>
+                </li>
+
+                <li>
+                    <h5 class="mt-3">{{ app()->getLocale() === 'en' ? 'info@rsltrading.com' : (app()->getLocale() === 'km' ? 'អ៉ីមែល៖ info@rsltrading.com' : 'info@rsltrading.com') }}</h5>
                 </li>
                 <li>
-                    <h5 class="mt-3">+855 77 678 300</h5>
+                    <h5 class="mt-3">{{ app()->getLocale() === 'en' ? '+855 77 678 300' : (app()->getLocale() === 'km' ? 'លេខទូរស័ព្ទ៖ +៨៥៥ ៧៧ ៦៧៨ ៣០០' : '+855 77 678 300') }}</h5>
                 </li>
                 <li>
-                    <h5 class="mt-3">Operation Hour</h5>
+                    <h5 class="mt-3">{{ app()->getLocale() === 'en' ? 'Operation Hour' : (app()->getLocale() === 'km' ? 'ម៉ោងធ្វើការ' : 'Operation Hour') }}</h5>
                 </li>
-                <li>{{ app()->getLocale() === 'en' ? 'Mon - Fri' : (app()->getLocale() === 'km' ? 'Mon - Fri' : 'Mon - Fri') }} </li>
-                <li>8:00am - 5:00pm</li>
+                <li>{{ app()->getLocale() === 'en' ? 'Mon - Fri' : (app()->getLocale() === 'km' ? 'ច័ន្ទ - សុក្រ' : 'Mon - Fri') }}</li>
+                <li>{{ app()->getLocale() === 'en' ? '8:00am - 5:00pm' : (app()->getLocale() === 'km' ? 'ម៉ោង ៨:០០ ព្រឹក - ៥:០០ ល្ងាច' : '8:00am - 5:00pm') }}</li>
 
             </div>
 
@@ -345,7 +356,7 @@
             <div class="footer-social">
                 <img src="{{ asset('assets/images/footer-logo.png') }}">
 
-                <h5 class="">{{ app()->getLocale() === 'en' ? 'Follow Us' : (app()->getLocale() === 'km' ? 'Follow Us' : 'Follow Us') }}</h5>
+                <h5 class="">{{ app()->getLocale() === 'en' ? 'Follow Us' : (app()->getLocale() === 'km' ? 'ទំនាក់ទំនងមកយើងខ្ញុំ' : 'Follow Us') }}</h5>
 
                 <div class="link-social">
                     <a href="https://www.facebook.com/rsltradingcambodia" target="_blank"><svg width="27"
@@ -374,10 +385,9 @@
                 <p>{{ app()->getLocale() === 'en' ? 'Founded in 2015, RSL Trading is a Cambodian leader in agricultural exports, dedicated to connecting
                     local farmers with global markets. Our goal is to bring the finest “Made in Cambodia” products such
                     as rice, coffee, corn, cashew nuts, mangoes, and cassava and other nutrient fruits—to buyers
-                    worldwide while supporting farmers with better opportunities and incomes.' : (app()->getLocale() === 'km' ? 'Founded in 2015, RSL Trading is a Cambodian leader in agricultural exports, dedicated to connecting
-                    local farmers with global markets. Our goal is to bring the finest “Made in Cambodia” products such
-                    as rice, coffee, corn, cashew nuts, mangoes, and cassava and other nutrient fruits—to buyers
-                    worldwide while supporting farmers with better opportunities and incomes.' : 'Founded in 2015, RSL Trading is a Cambodian leader in agricultural exports, dedicated to connecting
+                    worldwide while supporting farmers with better opportunities and incomes.' 
+                    : (app()->getLocale() === 'km' ? 'ក្រុមហ៊ុន អ អេស​ អិល ត្រេឌីង ឯ.ក ត្រូវបានបង្កើតឡើងក្នុងឆ្នាំ ២០១៥ ​ដោយ ផ្តោតនាំចេញផលិតផលកសិកម្មលក់លើទីផ្សារទីផ្សារក្នុងស្រុក និងទីផ្សារអន្តរជាតិ ផ្សាភ្ជាប់ទំនាក់ទំនងជាមួយកសិករក្នុងស្រុកដើម្បីនាំយកផលិតផលកសិកម្មដូចជា អង្ករ កាហ្វេ ម្រេច ចេក គ្រាប់ស្វាយចន្ទី ដំណាប់ស្វាយ ដំឡូងមី និងផលិតផលជាច្រើនទៀត ព្រមទាំងផ្ដល់ការគាំទ្រដល់ពួកគាត់សម្រាប់ការ ប្រមូលផល និងជួយបង្កើតប្រាក់ចំណូលកាន់តែប្រសើរ។' 
+                    : 'Founded in 2015, RSL Trading is a Cambodian leader in agricultural exports, dedicated to connecting
                     local farmers with global markets. Our goal is to bring the finest “Made in Cambodia” products such
                     as rice, coffee, corn, cashew nuts, mangoes, and cassava and other nutrient fruits—to buyers
                     worldwide while supporting farmers with better opportunities and incomes.') }}</p>

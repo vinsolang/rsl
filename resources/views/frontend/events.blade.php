@@ -801,15 +801,13 @@
                 </div>
                 <div class="banner-content">
                     <div class="main-banner-h1-bg">
-                        <h1 data-aos="zoom-in-up" data-aos-duration="1000">Activites</h1>
+                        <h1 data-aos="zoom-in-up" data-aos-duration="1000">{{ app()->getLocale() === 'en' ? 'Activites' : (app()->getLocale() === 'km' ? 'សកម្មភាពអាជីវកម្ម' : 'Activites') }}</h1>
                     </div>
                     <div class="main-banner-p-bg">
-                        <p data-aos="zoom-in-up" data-aos-duration="1200">​​​Your Trusted Partner in Cambodian Agricultural
-                            Exports</p>
+                        <p data-aos="zoom-in-up" data-aos-duration="1200">​​{{ app()->getLocale() === 'en' ? '​Your Trusted Partner in Cambodian Agricultural Exports' : (app()->getLocale() === 'km' ? 'យើងខ្ញ៉ំជាដៃគូដែលអតិថិជនអាចទុកចិត្តក្នុងការនាំចេញផលិតផលកសិកម្មរបស់កម្ពុជា' : '​Your Trusted Partner in Cambodian Agricultural Exports') }}</p>
                     </div>
                     <a data-aos="zoom-in-up" data-aos-duration="1400" href="#contact"><button
-                            class="btn-Interest-to-export">Interest to
-                            Export</button></a>
+                            class="btn-Interest-to-export"> {{ app()->getLocale() === 'en' ? 'Interest to Export' : (app()->getLocale() === 'km' ? 'ចំណាប់អារម្មណ៍ក្នុងការនាំចេញ' : 'Interest to Export') }}</button></a>
                 </div>
             </div>
         </div>
@@ -829,7 +827,7 @@
 
                         <div
                             class="absolute bottom-[-100%] left-0 w-full bg-black/60 text-white px-4 py-4 transition-all duration-300 text-[12px] group-hover:bottom-0 ">
-                            <h1 class="text-[14px] md:text-[15px] font-[700]">Visit rice mills in Battambang province.</h1>
+                            <h1 class="text-[14px] md:text-[15px] font-[700]"> {{ app()->getLocale() === 'en' ? 'Visit rice mills in Battambang province.' : (app()->getLocale() === 'km' ? 'ទស្សនារោងម៉ាស៊ីនកិនស្រូវនៅខេត្តបាត់ដំបង។' : 'Visit rice mills in Battambang province.') }}</h1>
 
                         </div>
                     </div>
@@ -839,7 +837,7 @@
 
                         <div
                             class="absolute bottom-[-100%] left-0 w-full bg-black/60 text-white px-4 py-4 transition-all duration-300 text-[12px] group-hover:bottom-0 ">
-                            <h1 class="text-[14px] md:text-[15px] font-[700]">Rice packing activities in Kandal province.</h1>
+                            <h1 class="text-[14px] md:text-[15px] font-[700]"> {{ app()->getLocale() === 'en' ? 'Rice packing activities in Kandal province.' : (app()->getLocale() === 'km' ? 'សកម្មភាពវេចខ្ចប់អង្ករនៅខេត្តកណ្តាល។' : 'Rice packing activities in Kandal province.') }}</h1>
 
                         </div>
                     </div>
@@ -849,7 +847,7 @@
 
                         <div
                             class="absolute bottom-[-100%] left-0 w-full bg-black/60 text-white px-4 py-4 transition-all duration-300 text-[12px] group-hover:bottom-0 ">
-                            <h1 class="text-[14px] md:text-[15px] font-[700]">Harvesting activities in Battambang province.</h1>
+                            <h1 class="text-[14px] md:text-[15px] font-[700]"> {{ app()->getLocale() === 'en' ? 'Harvesting activities in Battambang province.' : (app()->getLocale() === 'km' ? 'សកម្មភាពប្រមូលផលនៅខេត្តបាត់ដំបង។' : 'Harvesting activities in Battambang province.') }}</h1>
 
                         </div>
                     </div>
@@ -859,7 +857,7 @@
     </section>
 
     <section id="contact" class="relative z-[50]">
-        <form action="{{ route('contact.send') }}" method="POST" class="wrapper-contact container">
+        {{-- <form action="{{ route('contact.send') }}" method="POST" class="wrapper-contact container">
             <p>Contact Form</p>
             <div class="row">
                 @csrf
@@ -1113,7 +1111,8 @@
                     <p>Submit</p>
                 </button>
             </div>
-        </form>
+        </form> --}}
+        @include('frontend.include.contact-form')
     </section>
 
     <section>

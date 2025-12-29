@@ -42,7 +42,7 @@
             </video>
             <div class="form-contact">
 
-                <form action="{{ route('contact.send') }}" method="POST" class="wrapper-contact container">
+                {{-- <form action="{{ route('contact.send') }}" method="POST" class="wrapper-contact container">
                     <p>Contact Form</p>
                     <div class="row">
                         @csrf
@@ -296,7 +296,8 @@
                             <p>Submit</p>
                         </button>
                     </div>
-                </form>
+                </form> --}}
+                @include('frontend.include.contact-form')
             </div>
     </section>
 @endsection

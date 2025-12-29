@@ -1,27 +1,40 @@
 <?php
 
 return [
-    "q" => 'Q:',
-    "q1" => "What Cambodian products does RSL Trading export?",
-    "a1" => "A: RSL Trading exports premium Cambodian agricultural products, including rice, coffee beans, corn, cashew nuts, mangoes, and cassava. All products are sourced directly from local farmers in Cambodia.",
-    "q2" => "What is the minimum order quantity (MOQ) for exports?",
-    "a2" => "A: MOQ varies depending on the product and destination. Contact our export team in Phnom Penh for customized details.",
-    "q3" => "Which countries do you export to?",
-    "a3" => "A: We currently export to international markets, including Russia, and are expanding globally to bring Cambodian agricultural products to buyers worldwide.",
-    "q4"=> "How does RSL Trading ensure product quality and safe delivery?",
-    "a4"=> "A: All Cambodian products are carefully sourced, inspected, and packaged to meet international standards. As an affiliate of RSL Global Logistics, we professionally handle cargo, shipping, and export documentation to ensure smooth delivery worldwide.",
-    "q5" => "Can RSL Trading provide custom packaging or labeling for buyers?",
-    "a5" => "A: Yes. We can accommodate custom packaging and labeling to meet the requirements of international buyers.",
-    "q6" => "How can I order Cambodian agricultural products from RSL Trading?",
-    "a6" => "A: Buyers can contact RSL Trading in Phnom Penh via our website, phone, or email. Our team will guide you through product selection, pricing, shipping, and customs documentation.",
-    "q7" => "How can I order Cambodian agricultural products from RSL Trading?",
-    "a7" => "A: Farmers from across Cambodia can partner with RSL Trading to export rice, coffee, corn, fruits, and other crops. We guide farmers on quality standards, harvesting, and packaging to meet export requirements.",
-    "q8" => "How does RSL Trading ensure fair pricing for farmers?",
-    "a8" => "A: We assess local and international market prices and provide competitive, transparent rates to help Cambodian farmers earn sustainable income.",
-    "q9" => "How does RSL Trading ensure fair pricing for farmers?",
-    "a9" => "A: We help farmers access global markets, provide fair and transparent pricing, and offer guidance on agricultural best practices and quality improvements.",
-    "q10" => "How does RSL Trading ensure fair pricing for farmers?",
-    "a10" => "A: RSL Trading works with rice, coffee, corn, cashew nuts, mangoes, cassava, and other agricultural products that meet international quality standards.",
-    "q11" => "How does RSL Trading ensure fair pricing for farmers?",
-    "a11" => "A: We assess local and international market prices and provide competitive, transparent rates to help Cambodian farmers earn sustainable income.",
+    "q" => 'សំណួរ៖',
+    "q1" => "១. តើ​​ ក្រុមហ៊ុន  អ អេស អិល ត្រេឌីង ឯ.ក នាំចេញផលិតផលអ្វីខ្លះ?",
+    "a1" => "ចម្លើយ៖​​ ក្រុមហ៊ុន  អ អេស អិល ត្រេឌីង​ នាំចេញផលិតផលកសិកម្មជាចម្បងរួមមាន អង្ករ គ្រាប់កាហ្វេ ពោត គ្រាប់ស្វាយចន្ទី ស្វាយ ដំណាប់ស្វាយ និងដំឡូងមី។ ផលិតផលទាំងអស់ត្រូវបានទទួលដោយផ្ទាល់ពីកសិករ ឬសហគមន៍ក្នុងប្រទេសកម្ពុជា។",
+    
+    "q2" => "២. តើបរិមាណបញ្ជាទិញជាអប្បបរមា សម្រាប់ការនាំចេញមានប៉ុន្មាន?",
+    "a2" => "ចម្លើយ៖បរិមាណបញ្ជាទិញអប្បបរមាមានការប្រែប្រួលអាស្រ័យលើផលិតផល និងគោលដៅនាំចេញ។ សូមទាក់ទងមកកាន់ក្រុមការងាររបស់យើងខ្ញុំសម្រាប់ព័ត៌មានលម្អិតផ្អែកតាមតម្រូវការនាំចេញរបស់លោកអ្នក។",
+    
+    "q3" => "៣. តើ​​ ក្រុមហ៊ុន  អ អេស អិល ត្រេឌីង ឯ.ក បាននាំចេញទៅប្រទេសណាខ្លះ?",
+    "a3" => "ចម្លើយ៖ បច្ចុប្បន្ន​យើងខ្ញ៉ំ​នាំចេញ​ទៅ​កាន់​ទីផ្សារ​អន្តរជាតិ រួម​មាន​ប្រទេស​រុស្ស៊ី ចិន តៃវ៉ាន់ ក្រិក អារ៉ាប់សាអូឌីត ថៃ និងវៀតណាម ។
+        ហើយយើងខ្ញ៉ំក៏​កំពុង​ពង្រីក​ខ្លួន​ទៅ​កាន់ទីផ្សារ​ពិភពលោក​នានា ដូចជា ប្រទេសកាណាដា អូស្ត្រាលី កូរ៉េខាងត្បូង អាហ្វ្រិក កាតា បង់ក្លាដែស ហុងកុង ឥណ្ឌា
+        ដើម្បី​នាំ​យក​ផលិតផល​កសិកម្ម​កម្ពុជា​ទៅ​កាន់​អ្នកទិញ​នៅ​ទូទាំង​ពិភពលោកបន្ថែមទៀត។
+        ",
+    
+    "q4"=> "៤. តើ ​ ក្រុមហ៊ុន អ អេស អិល ត្រេឌីង ឯ.ក ធានាគុណភាពផលិតផល និងការដឹកជញ្ជូនប្រកបដោយសុវត្ថិភាពយ៉ាងដូចម្តេច?",
+    "a4"=> "ចម្លើយ៖ ផលិតផលកម្ពុជាទាំងអស់ត្រូវមានប្រភពប្រភពច្បាស់លាស់ ការត្រួតពិនិត្យ និងវេចខ្ចប់យ៉ាងប្រុងប្រយ័ត្ន ដើម្បីអនុលោមតាមស្តង់ដាអន្តរជាតិ។ ក្នុងនាមជាក្រុមហ៊ុនសម្ព័ន្ធរបស់ ក្រុមហ៊ុន អ អេស អិល​ ដឹកជញ្ជូនអន្តរជាតិ យើងខ្ញុំមានជំនាញវិជ្ជាជីវៈក្នុងការដោះស្រាយឯកសារដឹកជញ្ជូន និងនាំចេញ ដើម្បីធានាបាននូវការដឹកជញ្ជូនដោយរលូនទៅទូទាំងពិភពលោក។",
+   
+    "q5" => "៥. តើក្រុមហ៊ុន អអេសអិល ត្រេឌីង ឯ.ក អាចផ្តល់ការវេចខ្ចប់ឬស្លាកសញ្ញាតាមតម្រូវការសម្រាប់អ្នកទិញបានទេ?",
+    "a5" => "ចម្លើយ៖ បាទ/ចាស៎។ យើងខ្ញុំអាចផ្តល់ការវេចខ្ចប់ និងស្លាកសញ្ញាតាមតម្រូវការ ដើម្បីបំពេញតាមតម្រូវការរបស់អតិថិជនក្រៅស្រុក។",
+    
+    "q6" => "៦. តើខ្ញុំអាចបញ្ជាទិញផលិតផលកសិកម្មកម្ពុជាពីក្រុមហ៊ុនបានយ៉ាងដូចម្តេច?",
+    "a6" => "ចម្លើយ៖ លោកអ្នកអាចទាក់ទងមកក្រុមហ៊ុនយើងខ្ញ៉ំមានទីស្នាក់ការនៅភ្នំពេញ តាមរយៈគេហទំព័រ លេខទូរសព្ទ ឬសារអេឡិចត្រូនិកបាន។ ក្រុមការងាររបស់យើងខ្ញុំនឹងណែនាំអ្នកអំពីជម្រើសនៃ​ ផលិតផល តារាងតម្លៃ ការដឹកជញ្ជូន និងឯកសារគយជាដើម។",
+    
+    "q7" => "១. តើកសិករក្នុងស្រុកអាចផ្គត់ផ្គង់ផលិតផលទៅឱ្យក្រុមហ៊ុនបានយ៉ាងដូចម្តេច?",
+    "a7" => "ចម្លើយ៖ កសិករមកពីទូទាំងប្រទេសកម្ពុជាអាចសហការជាមួយក្រុមហ៊ុនយើងខ្ញ៉ំដើម្បីនាំចេញអង្ករ កាហ្វេ ពោត ផ្លែឈើ និងដំណាំហូបផ្លែផ្សេងៗទៀត។",
+    
+    "q8" => "២. តើក្រុមហ៊ុនធានា​តម្លៃ​សមរម្យ​សម្រាប់​កសិករ​យ៉ាង​ដូចម្តេច?",
+    "a8" => "ចម្លើយ៖ យើងខ្ញុំទិញផ្តល់ជូនតម្លៃទីផ្សារក្នុងស្រុក និងអន្តរជាតិ ក្នុងតម្លៃល្អ និងមានតម្លាភាព ដើម្បីជួយកសិករកម្ពុជារកប្រាក់ចំណូលប្រកបដោយចីរភាព។",
+    
+    "q9" => "៣. តើក្រុមហ៊ុនបានជួយអ្វីខ្លះដល់កសិករ?",
+    "a9" => "ចម្លើយ៖ យើងខ្ញុំជួយកសិករឱ្យចូលទៅកាន់ទីផ្សារសកល ផ្តល់តម្លៃសមរម្យ មានតម្លាភាព និងផ្តល់ការណែនាំអំពីការអនុលោមនានា និងការកែលម្អគុណភាព។",
+    
+    "q10" => "៤. តើ​ផលិតផល​កសិកម្មប្រភេទ​ណា​ខ្លះ​ដែល​​មានសម្រាប់​ការ​នាំចេញ?",
+    "a10" => "ចម្លើយ៖ ក្រុមហ៊ុនយើងខ្ញ៉ំធ្វើការនាំចេញ អង្ករ កាហ្វេ ពោត គ្រាប់ស្វាយចន្ទី ស្វាយ ដំឡូងមី និងផលិតផលកសិកម្មផ្សេងទៀតដែលបំពេញតាមស្តង់ដាគុណភាពអន្តរជាតិ។",
+    
+    "q11" => "៥. តើមានកិច្ចសន្យា ឬកិច្ចព្រមព្រៀងជាមួយកសិករដែរឬទេ?",
+    "a11" => "ចម្លើយ៖ បាទ/ចាស៎។ យើងខ្ញុំបង្កើតកិច្ចព្រមព្រៀងដើម្បីបញ្ជាក់ពីគុណភាពផលិតផល កាលវិភាគដឹកជញ្ជូន និងការកំណត់តម្លៃ ដោយធានាសុវត្ថិភាព និងតម្លាភាពសម្រាប់ភាគីទាំងពីរ។",
 ];

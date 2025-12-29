@@ -46,43 +46,43 @@
         <li>
             <a href="{{ route('home') }}"
                 class="text-[#000] px-4 py-4 w-full nav_link text-[16px] text-decoration-none {{ Route::is('home') ? 'active' : '' }}">
-                {{ app()->getLocale() === 'en' ? 'Home' : (app()->getLocale() === 'km' ? 'Home' : 'Home') }}
+                {{ app()->getLocale() === 'en' ? 'Home' : (app()->getLocale() === 'km' ? 'ទំព័រដើម' : 'Home') }}
             </a>
         </li>
         <li>
             <a href="{{ route('export') }}"
                 class="text-[#000] px-4 py-4 w-full nav_link text-[16px] text-decoration-none {{ Route::is('export') ? 'active' : '' }}">
-                {{ app()->getLocale() === 'en' ? 'Export' : (app()->getLocale() === 'km' ? 'Export' : 'Export') }}
+                {{ app()->getLocale() === 'en' ? 'Export' : (app()->getLocale() === 'km' ? 'ការនាំចេញ' : 'Export') }}
             </a>
         </li>
         <li>
             <a href="{{ route('import') }} "
                 class="text-[#000] px-4 py-4 w-full nav_link text-[16px] text-decoration-none {{ Route::is('import') ? 'active' : '' }}">
-                {{ app()->getLocale() === 'en' ? 'Import' : (app()->getLocale() === 'km' ? 'Import' : 'Import') }}
+                {{ app()->getLocale() === 'en' ? 'Import' : (app()->getLocale() === 'km' ? 'ការនាំចូល' : 'Import') }}
             </a>
         </li>
         <li>
             <a href="{{ route('about') }} "
 
                 class="text-[#000] px-4 py-4 w-full nav_link text-[16px] text-decoration-none {{ Route::is('about') ? 'active' : '' }}">
-                            {{ app()->getLocale() === 'en' ? 'About Us' : (app()->getLocale() === 'km' ? 'About Us' : 'About Us') }}</a>
+                            {{ app()->getLocale() === 'en' ? 'About Us' : (app()->getLocale() === 'km' ? 'អំពីយើងខ្ញុំ' : 'About Us') }}</a>
         </li>
         <li>
             <a href="{{ route('events') }} "
                 class="text-[#000] px-4 py-4 w-full nav_link text-[16px] text-decoration-none {{ Route::is('events') ? 'active' : '' }}">
-                {{ app()->getLocale() === 'en' ? 'Activities' : (app()->getLocale() === 'km' ? 'Activities' : 'Activities') }}
+                {{ app()->getLocale() === 'en' ? 'Activities' : (app()->getLocale() === 'km' ? 'សកម្មភាព' : 'Activities') }}
             </a>
         </li>
         <li>
             <a href="{{ route('career') }} "
                 class="text-[#000] px-4 py-4 w-full nav_link text-[16px] text-decoration-none {{ Route::is('career') ? 'active' : '' }}">
-                {{ app()->getLocale() === 'en' ? 'Career' : (app()->getLocale() === 'km' ? 'Career' : 'Career') }}
+                {{ app()->getLocale() === 'en' ? 'Career' : (app()->getLocale() === 'km' ? 'ឱកាសការងារ' : 'Career') }}
             </a>
         </li>
         <li>
             <a href="{{ route('contact') }}"
                 class="text-[#000] px-4 py-4 w-full nav_link text-[16px] text-decoration-none {{ Route::is('contact') ? 'active' : '' }}">
-                {{ app()->getLocale() === 'en' ? 'Contact' : (app()->getLocale() === 'km' ? 'Contact' : 'Contact') }}
+                {{ app()->getLocale() === 'en' ? 'Contact' : (app()->getLocale() === 'km' ? 'ការទំនាក់ទំនង' : 'Contact') }}
             </a>
         </li>
     </ul>

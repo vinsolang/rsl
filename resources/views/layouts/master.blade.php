@@ -189,28 +189,28 @@ counters.forEach(counter => observer.observe(counter));
 
         const data = {
             import: [
-                "Basmati Rice (India)",
-                "Sona Masoori Rice",
-                "Cumin Seeds",
-                "Turmeric (Whole)",
-                "Red Peppers (Whole)",
-                "Cardamom (Green)",
-                "Turmeric Powder",
-                "Red Pepper Powder",
-                "Dried Garlic",
-                "Dried Onions"
+                "{{ app()->getLocale() === 'en' ? 'Basmati Rice (India)' : (app()->getLocale() === 'km' ? 'អង្ករបាសម៉ាទី' : 'Basmati Rice (India)') }}",
+                "{{ app()->getLocale() === 'en' ? 'Yellow Corn' : (app()->getLocale() === 'km' ? 'ពោតលឿង' : 'Yellow Corn') }}",
+                "{{ app()->getLocale() === 'en' ? 'Cumin Seeds' : (app()->getLocale() === 'km' ? 'គ្រាប់ម្អម ' : 'Cumin Seeds') }}",
+                "{{ app()->getLocale() === 'en' ? 'Turmeric (Whole)' : (app()->getLocale() === 'km' ? 'គ្រាប់រមៀត' : 'Turmeric (Whole)') }}",
+                "{{ app()->getLocale() === 'en' ? 'Red Peppers (Whole)' : (app()->getLocale() === 'km' ? 'ម្ទេសក្រហម' : 'Red Peppers (Whole)') }}",
+                "{{ app()->getLocale() === 'en' ? 'Cardamom (Green)' : (app()->getLocale() === 'km' ? 'ក្រវាញបៃតង' : 'Cardamom (Green)') }}",
+                // "{{ app()->getLocale() === 'en' ? 'Turmeric Powder' : (app()->getLocale() === 'km' ? 'ម្សៅរមៀត' : 'Turmeric Powder') }}",
+                "{{ app()->getLocale() === 'en' ? 'Red Pepper Powder' : (app()->getLocale() === 'km' ? 'ម្សៅម្រេចក្រហម' : 'Red Pepper Powder') }}",
+                "{{ app()->getLocale() === 'en' ? 'Dried Garlic' : (app()->getLocale() === 'km' ? 'ខ្ទឹម' : 'Dried Garlic') }}",
+                // "Dried Onions"
             ],
 
             export: [
-                "Rice",
-                "Yellow Corn",
-                "Fresh Mango",
-                "Dried Mango",
-                "Cashew Nuts",
-                "Peanuts",
-                "Dried Cassava",
-                "Pepper",
-                "Coffee Beans"
+                "{{ app()->getLocale() === 'en' ? 'Rice' : (app()->getLocale() === 'km' ? 'អង្ករ ' : 'Rice') }}",
+                "{{ app()->getLocale() === 'en' ? 'Yellow Corn' : (app()->getLocale() === 'km' ? 'ពោតលឿង' : 'Yellow Corn') }}",
+                "{{ app()->getLocale() === 'en' ? 'Fresh Mango' : (app()->getLocale() === 'km' ? 'ស្វាយ' : 'Fresh Mango') }}",
+                "{{ app()->getLocale() === 'en' ? 'Dried Mango' : (app()->getLocale() === 'km' ? 'ដំណាប់ស្វាយ' : 'Dried Mango') }}",
+                "{{ app()->getLocale() === 'en' ? 'Cashew Nuts' : (app()->getLocale() === 'km' ? 'គ្រាប់ស្វាយចន្ទី ' : 'Cashew Nuts') }}",
+                "{{ app()->getLocale() === 'en' ? 'Peanuts' : (app()->getLocale() === 'km' ? 'អង្ករ ' : 'សណ្តែកដី') }}",
+                "{{ app()->getLocale() === 'en' ? 'Dried Cassava' : (app()->getLocale() === 'km' ? 'ដំឡូងមី' : 'Dried Cassava') }}",
+                "{{ app()->getLocale() === 'en' ? 'Pepper' : (app()->getLocale() === 'km' ? 'ម្រេច' : 'Pepper') }}",
+                "{{ app()->getLocale() === 'en' ? 'Coffee Beans' : (app()->getLocale() === 'km' ? 'គ្រាប់កាហ្វេ' : 'Coffee Beans') }}"
             ]
         };
 
