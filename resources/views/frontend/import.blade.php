@@ -945,6 +945,176 @@
                 transform: scale(1);
             }
         }
+        .partner-main {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5%;
+            ;
+        }
+
+        @media screen and (max-width: 1200px) {
+
+            .partner-main {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 15%;
+                ;
+            }
+        }
+
+        .partner-main .partner-bg {
+            width: 100%;
+            height: 598px !important;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+
+        .partner-main h1 {
+            font-size: 20px;
+            color: #FFFFFF;
+            font-weight: bolder;
+            margin-bottom: 2.5rem;
+            margin-top: 2.5rem;
+        }
+
+        @media screen and (max-width: 426px) {
+            .partner-main h1 {
+                font-size: 14px;
+                margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        .partner-main .partner-card-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 2rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .partner-main .partner-card-wrapper .partner-card {
+            width: 100%;
+            height: 323px;
+            background-color: #007E3A;
+            color: #FFFFFF;
+            border-radius: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+            padding-left: 1rem;
+        }
+
+        .partner-main .partner-card-wrapper .partner-card h5 {
+            font-size: 20px;
+        }
+
+        .partner-main .partner-card-wrapper .partner-card p {
+            font-size: 15px;
+        }
+
+        .partner-main .partner-card-wrapper .partner-card svg {
+            width: 80px
+        }
+
+        @media screen and (max-width: 769px) {
+            .partner-main .partner-card-wrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+
+            .partner-main .partner-card-wrapper .partner-card {
+                width: 100%;
+                height: 220px;
+                background-color: #007E3A;
+                color: #FFFFFF;
+                border-radius: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 0.5rem;
+                padding-left: 0.5rem;
+            }
+
+            .partner-main .partner-card-wrapper .partner-card h5 {
+                font-size: 15px;
+            }
+
+            .partner-main .partner-card-wrapper .partner-card p {
+                font-size: 13px;
+            }
+
+            .partner-main .partner-card-wrapper .partner-card svg {
+                width: 60px
+            }
+
+        }
+
+
+        @media screen and (max-width: 426px) {
+
+            .partner-main {
+                width: 100%;
+                height: 598px;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .partner-main .partner-card-wrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0.5rem;
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+
+
+            .partner-main .partner-card-wrapper .partner-card {
+                width: 100%;
+                height: 190px;
+                background-color: #007E3A;
+                color: #FFFFFF;
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 0.5rem;
+                padding-left: 0.5rem;
+            }
+
+            .partner-main .partner-card-wrapper .partner-card h5 {
+                font-size: 13px;
+            }
+
+            .partner-main .partner-card-wrapper .partner-card p {
+                font-size: 10px;
+            }
+
+            .partner-main .partner-card-wrapper .partner-card svg {
+                width: 40px
+            }
+        }
+
     </style>
     <section>
         <div class="main-banner relative">

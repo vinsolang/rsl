@@ -1336,7 +1336,7 @@
 
             <h2 class="text-[#8DC640] text-[20px] md:text-[25px] welcome-to-text">{{ app()->getLocale() === 'en' ? 'Welcome to' : (app()->getLocale() === 'km' ? 'សូមស្វាគមន៍មកកាន់' : 'Welcome to') }}</h2>
 
-            <h1 class="text-[30px] md:text-[50px] text-[#059848] leading-tight fw-bolder">
+            <h1 class="text-[30px] md:text-[50px] text-[#059848] leading-tight fw-bolder {{ app()->getLocale() == 'km' ? 'text-xl md:text-2xl' : 'text-[30px] md:text-[50px]' }}">
                 {{ app()->getLocale() === 'en' ? 'RSL TRADING' : (app()->getLocale() === 'km' ? 'ក្រុមហ៊ុន អ អេស​ អិល ត្រេឌីង ឯ.ក' : 'RSL TRADING') }}
             </h1>
 

@@ -450,7 +450,7 @@
         }
 
         .partner-main h1 {
-            font-size: 25px;
+            font-size: 20px;
             color: #FFFFFF;
             font-weight: bolder;
             margin-bottom: 2.5rem;
@@ -459,7 +459,7 @@
 
         @media screen and (max-width: 426px) {
             .partner-main h1 {
-                font-size: 18px;
+                font-size: 14px;
                 margin-top: 1.5rem;
                 margin-bottom: 1.5rem;
             }

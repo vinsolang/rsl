@@ -1243,7 +1243,7 @@
     </section>
 
     <section>
-        <div class="mt-[25rem] text-center flex flex-col gap-2 items-center justify-center max-w-7xl mx-auto px-2">
+        <div class="lg:mt-[25rem] text-center flex flex-col gap-2 items-center justify-center max-w-7xl mx-auto px-2">
             {{-- <img class="second-banner-img" src="{{ asset('assets/images/about-us-second-image.png') }}"> --}}
             <img class="" src="{{ asset('assets/images/profile-card-1.png') }}" class="">
             <h5 class="text-[20px] md:text-[25px] font-[700] text-[#059848]">{{ app()->getLocale() === 'en' ? 'Message from Board of Director' : (app()->getLocale() === 'km' ? 'សាររបស់ប្រធានក្រុមប្រឹក្សាភិបាល' : 'Message from Board of Director') }}</h5>
