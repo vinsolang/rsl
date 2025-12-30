@@ -24,7 +24,7 @@
 
                 <div class="col-lg-6 col-md-6 input-field">
                     <select name="country" class="form-select" aria-label="Default select example">
-                        <option selected disabled>ប្រទេស (ជ្រើសរើសប្រទេស)</option>
+                        <option selected disabled>{{ app()->getLocale() === 'en' ? 'Country' : (app()->getLocale() === 'km' ? 'ប្រទេស (ជ្រើសរើសប្រទេស)' : 'Country') }}</option>
                         <option value="Afghanistan">Afghanistan</option>
                         <option value="Albania">Albania</option>
                         <option value="Algeria">Algeria</option>

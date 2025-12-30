@@ -332,7 +332,8 @@
                     <a style="color:#FFFFFF">
                         {!! app()->getLocale() === 'en'
                             ? '#202, Borey 999 Honey, 2<sup>nd</sup> Floor, Street 355, Group 03, Village 1, Boeng Kak 1 Commune, Toul Kork District, Phnom Penh'
-                            : 'អាសយដ្ឋាន៖ ផ្ទះលេខ ២០២ បុរី ៩៩៩ ហានី ជាន់ទី ២ ផ្លូវលេខ ៣៥៥ ក្រុមទី ០៣ ភូមិ ១ សង្កាត់បឹងកក់ ១ ខណ្ឌទួលគោក រាជធានីភ្នំពេញ'
+                            : (app()->getLocale() == 'km' ? 'អាសយដ្ឋាន៖ ផ្ទះលេខ ២០២ បុរី ៩៩៩ ហានី ជាន់ទី ២ ផ្លូវលេខ ៣៥៥ ក្រុមទី ០៣ ភូមិ ១ សង្កាត់បឹងកក់ ១ ខណ្ឌទួលគោក រាជធានីភ្នំពេញ'
+                            : '#202, Borey 999 Honey, 2<sup>nd</sup> Floor, Street 355, Group 03, Village 1, Boeng Kak 1 Commune, Toul Kork District, Phnom Penh')
                         !!}
                     </a>
                 </li>
